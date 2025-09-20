@@ -1,0 +1,38 @@
+userName: ${BROWSERSTACK_USERNAME}
+accessKey: ${BROWSERSTACK_ACCESS_KEY}
+framework: playwright
+
+platforms:
+  - os: ios
+    osVersion: 16
+    deviceName: iPhone 14
+    browserName: playwright-webkit
+
+  - os: android
+    osVersion: 13.0
+    deviceName: Samsung Galaxy S22
+    browserName: playwright-chromium
+
+  - os: Windows
+    osVersion: 11
+    browserName: chrome
+
+  - os: OS X
+    osVersion: Ventura
+    browserName: playwright-webkit
+
+
+projectName: DQueza Playwright Tests
+buildName: dqBuild
+buildIdentifier: "#31"
+
+browserstackLocal: false
+browserStackLocalOptions:
+  skipBinaryInitialisation: false
+
+testContextOptions:
+  skipSessionStatus: false
+  skipSessionName: false
+
+logDir: log
+proxySettings: {}

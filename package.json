@@ -1,0 +1,40 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "pretest": "tsc --noEmit && eslint tests/**",
+    "test": "playwright test",
+    "postinstall": "npm update browserstack-node-sdk",
+    "smoketest": "playwright test tests/llmhq/tests/smoketest",
+    "regression": "playwright test tests/llmhq/tests/regression",
+    "build": "tsc --clean && tsc",
+    "clean": "rimraf dist",
+    "start": "node dist/validate-files.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.35.0",
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.3.0",
+    "@types/user-agents": "^1.0.4",
+    "browserstack-node-sdk": "^1.42.6",
+    "eslint": "^9.35.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.44.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "playwright-msteams-reporter": "^0.0.12",
+    "user-agents": "^1.1.660",
+    "zerostep": "^1.2.1"
+  },
+  "directories": {
+    "test": "tests"
+  }
+}

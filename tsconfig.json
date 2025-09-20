@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "dist", // or "build"
+    "types": ["node", "playwright"]
+  },
+  "include": ["src", "tests"],
+  "exclude": ["node_modules", "dist"]
+}
