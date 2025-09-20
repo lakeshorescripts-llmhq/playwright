@@ -1,8 +1,24 @@
-import { Page, expect } from '@playwright/test';
+import { Page, expect, Locator } from '@playwright/test';
 import { CategoryRole } from '../types/category';
 
+
+
+
 export class CategoryPage {
-  constructor(private page: Page) {}
+  
+  readonly page: Page;
+  readonly sortDropdown: Locator;
+  readonly productTitles: Locator;
+
+  constructor(page: Page) {
+    this.page = page;
+    this.sortDropdown = page.locator('select#sort'); // Adjust selector as needed
+    this.productTitles = page.locator('.product-title'); // Adjust selector as needed
+  }
+
+
+
+  //constructor(private page: Page) {}
 
   async selectSubCategory(subCategory: { role: CategoryRole, name: string }) {
     console.log(`📦 Selecting sub-category: ${subCategory.name}`);
@@ -112,6 +128,19 @@ async navigate() {
   async clickCheckBalance() {
     await this.page.getByTestId('handle-show').click();
   }
+
+  
+  async selectSortOption1(optionText: string) {
+    await this.sortDropdown.selectOption({ label: optionText });
+    await this.page.waitForLoadState('networkidle');
+  }
+
+  async getProductTitles(): Promise<string[]> {
+  const allTitles = await this.productTitles.allTextContents();
+  return allTitles.slice(0, 5);
+}
+
+
 
 
 }

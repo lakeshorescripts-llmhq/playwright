@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test';
 import { HomePage } from '../../pages/HomePage';
 import { CategoryPage } from '../../pages/CategoryPage';
 import { locators } from '../../test-data/locators';
+import { dataVariables } from '../../test-data/dataVariables';
 
 
 
@@ -11,7 +12,7 @@ test.describe('PLP Regression Tests', () => {
     test.describe.configure({ mode: 'parallel' });
     
     const filterOption = locators.BackToSchool;
-
+    const sortOption = dataVariables.sortByPriceHighToLow;
 
     let homePage: HomePage;
     let categoryPage: CategoryPage;
@@ -149,11 +150,17 @@ test.describe('PLP Regression Tests', () => {
     await expect(page.getByText(/Item # /).first()).not.toBeVisible();
   });
 
-  /*
-  test('Sort', async () => {
-    // validate selecting each option from the sort dropdown displays the page results in the selected option
-  });
 
+  
+test('Verify sorting by price updates product order', async ({ page }) => {
+  await homePage.hoverShopAll();
+  await homePage.selectCategoryLink(locators.activePlay);
+  await page.waitForLoadState('domcontentloaded');
+  await categoryPage.selectSortOption(sortOption);
+});
+
+
+  /*
   test('Items Per Page', async () => {
     // validate select each option from the Items per page dropdown displays the number of page results in the selected option
   });
