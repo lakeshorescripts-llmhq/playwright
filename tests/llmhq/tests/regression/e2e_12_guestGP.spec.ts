@@ -25,10 +25,16 @@ test('Google Pay checkout flow with HAR recording or mocking', async () => {
   await page.locator(selectors.searchInput).press('Enter');
   await page.locator(selectors.searchButton).click();
   await page.locator(selectors.addToCart).click();
-  await page.locator(selectors.googlePayButton).click();
+  await page.getByRole('button', { name: 'Google Pay' }).click();
+  //await page.locator(selectors.googlePayButton).click();
 
   await page.waitForURL(/checkout-page/);
   await page.waitForLoadState('domcontentloaded');
+
+  await expect(page.getByRole('heading', { name: 'Address Verification' })).toBeVisible();
+  await page.getByRole('heading', { name: 'Suggested Address' }).click();
+  await page.getByRole('button', { name: 'Select Address' }).click();
+  await expect(page.getByRole('heading', { name: 'Address Verification' })).not.toBeVisible();
 
   const submitOrderButton = page.locator(selectors.submitOrderButton);
   await expect(submitOrderButton).toBeVisible();
@@ -39,6 +45,12 @@ test('Google Pay checkout flow with HAR recording or mocking', async () => {
   expect(url).not.toMatch(/^https:\/\/oclive.*\.llmhq\.com/);
 
   await submitOrderButton.click();
+  
+  // Wait for navigation and network idle state
+  await Promise.all([
+    page.waitForNavigation(),
+    page.waitForLoadState('networkidle')
+  ]);
 
   await expect(page).toHaveURL(/order-confirmation-page/, { timeout: 30000 });
   await expect(page.locator(selectors.thankYouHeading)).toBeVisible({ timeout: 10000 });

@@ -150,14 +150,13 @@ test.describe('PLP Regression Tests', () => {
     await expect(page.getByText(/Item # /).first()).not.toBeVisible();
   });
 
-
   
-test('Sort', async ({ page }) => {
-  await homePage.hoverShopAll();
-  await homePage.selectCategoryLink(locators.activePlay);
-  await page.waitForLoadState('domcontentloaded');
-  await categoryPage.selectSortOption(sortOption);
-});
+  test('Sort', async ({ page }) => {
+    await homePage.hoverShopAll();
+    await homePage.selectCategoryLink(locators.activePlay);
+    await page.waitForLoadState('domcontentloaded');
+    await categoryPage.selectSortOption(sortOption);
+  });
 
 
   /*
