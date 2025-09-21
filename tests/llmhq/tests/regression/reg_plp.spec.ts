@@ -152,7 +152,7 @@ test.describe('PLP Regression Tests', () => {
 
 
   
-test('Verify sorting by price updates product order', async ({ page }) => {
+test('Sort', async ({ page }) => {
   await homePage.hoverShopAll();
   await homePage.selectCategoryLink(locators.activePlay);
   await page.waitForLoadState('domcontentloaded');
