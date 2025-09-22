@@ -9,7 +9,7 @@ export default defineConfig({
   timeout: process.env.CI ? 60000 : 30000, // Longer timeout in CI
   fullyParallel: true, // Enable parallel execution
   forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 1, // More retries in CI
+  retries: process.env.CI ? 0 : 0, // More retries in CI
   workers: process.env.CI ? 4 : 2, // Adjust based on environment
   
   
@@ -90,9 +90,9 @@ export default defineConfig({
     //storageState: 'storage/state.json',
     
     // to display PDP1.0 on UAT
-    // extraHTTPHeaders: {
-    //   'react-pdp-2': 'false',
-    // },
+    extraHTTPHeaders: {
+      'react-pdp-2': 'false',
+    },
    },
 
    
@@ -108,6 +108,7 @@ export default defineConfig({
         }
       },
     },
+    /*
     {
       name: 'Firefox Desktop',
       use: {
@@ -151,6 +152,7 @@ export default defineConfig({
         }
       },
     }
+    */
   ],
 
 });

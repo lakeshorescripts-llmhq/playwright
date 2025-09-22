@@ -187,7 +187,7 @@ test.describe('PLP Regression Tests', () => {
     await categoryPage.selectSortOption(sortOption);
   });
 
-  test('Items Per Page Dropdown', async ({ page }) => {
+  test('Items Per Page', async ({ page }) => {
     test.setTimeout(90000);
 
     // Navigate to category page and handle banner

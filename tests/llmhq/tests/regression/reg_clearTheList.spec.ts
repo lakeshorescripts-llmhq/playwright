@@ -7,6 +7,12 @@ import { dataVariables } from '../../test-data/dataVariables';
 
 test.setTimeout(60000);
 
+test.use({
+  viewport: { width: 1280, height: 720 },
+});
+
+
+
 test('REGRESSION - CLEAR THE LIST FUNCTIONALITY', async ({ page }) => {
   const home = new HomePage(page);
   const ctl = new ClearTheList(page);

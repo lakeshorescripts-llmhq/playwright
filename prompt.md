@@ -6,10 +6,15 @@ Create the test using the existing Page Object Model framework.
 Use existing test data files when needed.
 Save generated test file in the tests directory.
 Execute the test file and iterate until the test passes.
+Follow instructions in playwright-typescript.instructions.md file
 
 
-## Test Scenario: Product Listing Page Regression Tests
+## Test Scenario: Product Detail Page (PDP) Regression Tests
 
 ### Description
-Complete the remaining test cases in reg_plp.spec.ts file
+Navigate to https://wwwtest.lakeshorelearning.com/products/test-products/regular-price-shop-by-category-no-reviews/s/TEST050/
+verify product images, product name and product price displays properly
+verify quantity field functions properly
+verify ship item and store pickup options function properly
+verify product details, reviews, lakeshore rewards, lakeshore difference display and function properly
 

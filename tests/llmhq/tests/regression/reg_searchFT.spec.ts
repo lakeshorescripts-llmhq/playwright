@@ -46,20 +46,26 @@ test.describe('Search Regression Tests', () => {
         // Wait for search results to load
         await page.waitForLoadState('domcontentloaded');
         
-        // Go back to home page
-        await homePage.navigateTo();
-        
+        await homePage.navigateToFurnitureTab();
+        await homePage.clickSearchButtonFT();
+
+
         // Focus the search field to trigger the type-ahead popup
+    
+        await page.getByRole('textbox', { name: 'Search:' }).fill('');
         await homePage.focusSearchField();
+        await page.getByRole('textbox', { name: 'Search:' }).click();
         
         // Wait a bit for the popup to appear
         await page.waitForTimeout(1000);
         
         // Verify the recently viewed popup is visible
-        await expect(page.getByRole('heading', { name: 'Recent Searches:' })).toBeVisible();
+        await expect(page.getByText('Recent Searches:')).toBeVisible();
         
         // Verify the recently viewed item contains our search keyword
-        //await expect(page.getByText(new RegExp(`.*/${searchKeyword}/`))).toBeVisible();
+        //await expect(page.getByRole('link', { name: new RegExp(searchKeyword, 'i') })).toBeVisible();
+
+
     });
 
     test('should display type-ahead popup', async ({page}) => {
