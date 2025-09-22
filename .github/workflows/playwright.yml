@@ -16,30 +16,36 @@ jobs:
         node-version: [18.x]
         shard: [1/4, 2/4, 3/4, 4/4]  # Split tests into 4 parallel shards
 
+    # Environment setup and permissions
+    permissions:
+      contents: read
+      id-token: write
+      checks: write
+
     steps:
     - uses: actions/checkout@v3
 
     - name: Validate Environment
+      shell: bash
       run: |
-        echo "Checking required secrets and configurations..."
-        missing_secrets=()
+        echo "Checking required environment variables..."
         
-        # Check required secrets
-        # [ -z "${{ secrets.PLAYWRIGHT_USERNAME }}" ] && missing_secrets+=("PLAYWRIGHT_USERNAME")
-        # [ -z "${{ secrets.PLAYWRIGHT_PASSWORD }}" ] && missing_secrets+=("PLAYWRIGHT_PASSWORD")
+        # Define required variables
+        required_vars=(
+          "PLAYWRIGHT_USERNAME"
+          "PLAYWRIGHT_PASSWORD"
+        )
         
-        # Report missing secrets
-        if [ ${#missing_secrets[@]} -ne 0 ]; then
-          echo "Error: The following required secrets are missing:"
-          printf '%s\n' "${missing_secrets[@]}"
-          echo "Please add these secrets in your repository settings:"
-          echo "  1. Go to Settings > Secrets and Variables > Actions"
-          echo "  2. Click 'New repository secret'"
-          echo "  3. Add each missing secret"
-          exit 1
-        fi
+        # Check if secrets exist using GitHub's special test syntax
+        for var in "${required_vars[@]}"; do
+          if [[ ! "${{ toJSON(secrets) }}" =~ $var ]]; then
+            echo "::error::Missing required secret: $var"
+            echo "Please configure this secret in repository settings"
+            exit 1
+          fi
+        done
         
-        echo "✓ All required secrets are configured"
+        echo "✓ Environment validation successful"
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
@@ -55,26 +61,38 @@ jobs:
 
     - name: Run Playwright tests
       run: |
-        echo "Starting Playwright tests (Shard ${{ matrix.shard }})..."
+        echo "Starting Playwright tests (Shard ${{ matrix.shard }})"
         
-        # Create artifacts directory
-        mkdir -p test-artifacts
+        # Setup test directories
+        mkdir -p test-artifacts/traces
+        mkdir -p test-artifacts/screenshots
         
-        # Run tests with additional options for better debugging
+        # Run tests with comprehensive configuration
         npx playwright test \
           --shard ${{ matrix.shard }} \
-          --reporter=list,html,json \
-          --trace on-failure \
-          || (echo "Tests failed. Check artifacts for details." && exit 1)
+          --reporter=dot,html,json \
+          --trace retain-on-failure \
+          --update-snapshots \
+          --workers=1 \
+          --retries=2 || \
+        (
+          echo "::error::Tests failed - check artifacts for details"
+          exit 1
+        )
       env:
-        CI: true
-        # Test credentials
-        # PLAYWRIGHT_USERNAME: ${{ secrets.PLAYWRIGHT_USERNAME }}
-        # PLAYWRIGHT_PASSWORD: ${{ secrets.PLAYWRIGHT_PASSWORD }}
-        # Additional configuration
-        BROWSER: chromium
-        HEADLESS: true
-        WORKERS: 1  # Run tests sequentially within each shard for stability
+        # Core settings
+        CI: 'true'
+        NODE_ENV: 'test'
+        
+        # Test credentials (securely accessed)
+        PLAYWRIGHT_USERNAME: ${{ secrets.PLAYWRIGHT_USERNAME }}
+        PLAYWRIGHT_PASSWORD: ${{ secrets.PLAYWRIGHT_PASSWORD }}
+        
+        # Test configuration
+        PLAYWRIGHT_BROWSER: 'chromium'
+        PLAYWRIGHT_HEADLESS: 'true'
+        PLAYWRIGHT_WORKERS: '1'
+        PLAYWRIGHT_TEST_TIMEOUT: '60000'
 
     - name: Upload test results
       if: always()
@@ -86,13 +104,39 @@ jobs:
           test-results/
           screenshots/
 
-    # - name: Send notification
-    #   if: failure()
-    #   uses: rtCamp/action-slack-notify@v2
-    #   env:
-    #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-    #     SLACK_COLOR: ${{ job.status }}
-    #     SLACK_MESSAGE: 'Playwright tests failed :x:'
-    #     SLACK_TITLE: 'Test Failure'
-    #     SLACK_USERNAME: 'GitHub Actions'
-    #     SLACK_ICON: ':github:'
+    - name: Process test results
+      if: always()
+      id: test-results
+      run: |
+        if [ -f "test-results/report.json" ]; then
+          echo "results_found=true" >> $GITHUB_OUTPUT
+          
+          # Extract test statistics
+          total=$(jq '.stats.total' test-results/report.json)
+          passed=$(jq '.stats.passed' test-results/report.json)
+          failed=$(jq '.stats.failed' test-results/report.json)
+          
+          echo "total=$total" >> $GITHUB_OUTPUT
+          echo "passed=$passed" >> $GITHUB_OUTPUT
+          echo "failed=$failed" >> $GITHUB_OUTPUT
+        else
+          echo "results_found=false" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Send notification
+      if: failure() && steps.test-results.outputs.results_found == 'true'
+      uses: rtCamp/action-slack-notify@v2
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        SLACK_COLOR: ${{ job.status }}
+        SLACK_MESSAGE: |
+          *Playwright Test Results*
+          • Total Tests: ${{ steps.test-results.outputs.total }}
+          • Passed: ${{ steps.test-results.outputs.passed }}
+          • Failed: ${{ steps.test-results.outputs.failed }}
+          
+          View detailed results in the GitHub Actions run:
+          ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        SLACK_TITLE: 'Test Results - ${{ github.workflow }}'
+        SLACK_USERNAME: 'Playwright Tests'
+        SLACK_ICON: ':test_tube:'

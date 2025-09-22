@@ -18,6 +18,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.1",
     "@eslint/js": "^9.35.0",
     "@faker-js/faker": "^10.0.0",
     "@playwright/test": "^1.55.0",
@@ -25,6 +27,7 @@
     "@types/user-agents": "^1.0.4",
     "browserstack-node-sdk": "^1.42.6",
     "eslint": "^9.35.0",
+    "jq": "^1.7.2",
     "rimraf": "^6.0.1",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.44.0"
