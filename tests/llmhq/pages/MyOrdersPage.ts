@@ -43,6 +43,6 @@ export class MyOrdersPage {
 
   async verifyTotalAmount(expectedTotal: string) {
     console.log(`📦 Verifying total amount: ${expectedTotal}`);
-    await expect(this.page.getByText(expectedTotal)).toBeVisible();
+    await expect(this.page.getByText(expectedTotal).last()).toBeVisible();
   }
 }

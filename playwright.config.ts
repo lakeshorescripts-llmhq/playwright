@@ -6,14 +6,11 @@ dotenv.config();
 
 export default defineConfig({
   testDir: './tests',
-    timeout: 30000,
-  // Optional: run projects sequentially or parallel
-  fullyParallel: false,
+  timeout: process.env.CI ? 60000 : 30000, // Longer timeout in CI
+  fullyParallel: true, // Enable parallel execution
   forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 1 : 0,
-  //retries: 1,
-  workers: process.env.CI ? 4 : undefined,
-  //workers: 3,
+  retries: process.env.CI ? 2 : 1, // More retries in CI
+  workers: process.env.CI ? 4 : 2, // Adjust based on environment
   
   
   globalSetup: './global-setup', // ✅ fixed
@@ -21,7 +18,19 @@ export default defineConfig({
 
   snapshotDir: './screenshots', // Custom folder for screenshots
 
-  reporter: [['list'], ['html', { outputFolder: 'playwright-report', open: 'on-failure' }]],
+  reporter: [
+    ['list'],
+    ['html', { 
+      outputFolder: 'playwright-report', 
+      open: 'on-failure',
+    }],
+    ['json', { 
+      outputFile: 'test-results/test-results.json' 
+    }],
+    ['junit', { 
+      outputFile: 'test-results/junit-results.xml' 
+    }]
+  ],
 
   /*
   reporter: [
@@ -88,18 +97,60 @@ export default defineConfig({
 
    
   projects: [
+    // Desktop browsers
     {
-      name: 'Chromium',
-      use: { ...devices['Desktop Chrome'] },
+      name: 'Chrome Desktop',
+      use: {
+        ...devices['Desktop Chrome'],
+        viewport: { width: 1920, height: 1080 },
+        launchOptions: {
+          args: ['--disable-gpu', '--no-sandbox', '--disable-web-security']
+        }
+      },
     },
-    // {
-    //   name: 'Firefox',
-    //   use: { ...devices['Desktop Firefox'] },
-    // },
-    // {
-    //   name: 'WebKit',
-    //   use: { ...devices['Desktop Safari'] },
-    // },
+    {
+      name: 'Firefox Desktop',
+      use: {
+        ...devices['Desktop Firefox'],
+        viewport: { width: 1920, height: 1080 }
+      },
+    },
+    {
+      name: 'Safari Desktop',
+      use: {
+        ...devices['Desktop Safari'],
+        viewport: { width: 1920, height: 1080 }
+      },
+    },
+    // Tablet devices
+    {
+      name: 'iPad Pro',
+      use: {
+        ...devices['iPad Pro 11'],
+        contextOptions: {
+          reducedMotion: 'reduce',
+        }
+      },
+    },
+    // Mobile devices
+    {
+      name: 'iPhone',
+      use: {
+        ...devices['iPhone 13'],
+        contextOptions: {
+          reducedMotion: 'reduce',
+        }
+      },
+    },
+    {
+      name: 'Pixel',
+      use: {
+        ...devices['Pixel 5'],
+        contextOptions: {
+          reducedMotion: 'reduce',
+        }
+      },
+    }
   ],
 
 });

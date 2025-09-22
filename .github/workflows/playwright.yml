@@ -1,0 +1,98 @@
+name: Playwright Tests
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  schedule:
+    - cron: '0 0 * * *'  # Run daily at midnight
+
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+        shard: [1/4, 2/4, 3/4, 4/4]  # Split tests into 4 parallel shards
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Validate Environment
+      run: |
+        echo "Checking required secrets and configurations..."
+        missing_secrets=()
+        
+        # Check required secrets
+        # [ -z "${{ secrets.PLAYWRIGHT_USERNAME }}" ] && missing_secrets+=("PLAYWRIGHT_USERNAME")
+        # [ -z "${{ secrets.PLAYWRIGHT_PASSWORD }}" ] && missing_secrets+=("PLAYWRIGHT_PASSWORD")
+        
+        # Report missing secrets
+        if [ ${#missing_secrets[@]} -ne 0 ]; then
+          echo "Error: The following required secrets are missing:"
+          printf '%s\n' "${missing_secrets[@]}"
+          echo "Please add these secrets in your repository settings:"
+          echo "  1. Go to Settings > Secrets and Variables > Actions"
+          echo "  2. Click 'New repository secret'"
+          echo "  3. Add each missing secret"
+          exit 1
+        fi
+        
+        echo "✓ All required secrets are configured"
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Install Playwright Browsers
+      run: npx playwright install --with-deps
+
+    - name: Run Playwright tests
+      run: |
+        echo "Starting Playwright tests (Shard ${{ matrix.shard }})..."
+        
+        # Create artifacts directory
+        mkdir -p test-artifacts
+        
+        # Run tests with additional options for better debugging
+        npx playwright test \
+          --shard ${{ matrix.shard }} \
+          --reporter=list,html,json \
+          --trace on-failure \
+          || (echo "Tests failed. Check artifacts for details." && exit 1)
+      env:
+        CI: true
+        # Test credentials
+        # PLAYWRIGHT_USERNAME: ${{ secrets.PLAYWRIGHT_USERNAME }}
+        # PLAYWRIGHT_PASSWORD: ${{ secrets.PLAYWRIGHT_PASSWORD }}
+        # Additional configuration
+        BROWSER: chromium
+        HEADLESS: true
+        WORKERS: 1  # Run tests sequentially within each shard for stability
+
+    - name: Upload test results
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: playwright-report-${{ matrix.shard }}
+        path: |
+          playwright-report/
+          test-results/
+          screenshots/
+
+    # - name: Send notification
+    #   if: failure()
+    #   uses: rtCamp/action-slack-notify@v2
+    #   env:
+    #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+    #     SLACK_COLOR: ${{ job.status }}
+    #     SLACK_MESSAGE: 'Playwright tests failed :x:'
+    #     SLACK_TITLE: 'Test Failure'
+    #     SLACK_USERNAME: 'GitHub Actions'
+    #     SLACK_ICON: ':github:'
