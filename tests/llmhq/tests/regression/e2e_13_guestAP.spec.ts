@@ -10,7 +10,7 @@ import { CheckoutPage } from '../../pages/CheckoutPage.js';
 declare global {
   interface Window {
     LLUtils: {
-      applePayPaymentRequest: { orderShipType: string };
+      applePayPaymentRequest?: { orderShipType: string };
       publish: (event: string, data: unknown) => void;
     };
     mockApplePayHandler: () => Promise<{
@@ -20,6 +20,7 @@ declare global {
     }>;
   }
 }
+
 
 test.describe('Apple Pay Checkout Flow', () => {
   let testContext: BrowserContext;
