@@ -41,7 +41,8 @@ export class CartPage {
             this.page.getByRole('button', { name: 'Apple Pay' }),
             this.page.locator('button:has-text("Apple Pay")'),
             this.page.locator('[aria-label="Apple Pay"]'),
-            this.page.locator('.apple-pay-button')
+            this.page.locator('.apple-pay-button'),
+            this.page.getByRole('button').filter({ hasText: /^$/ }).nth(4),
         ];
         
         let applePayButton;

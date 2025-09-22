@@ -1,13 +1,16 @@
 import { test, expect, devices } from '@playwright/test';
-import { selectors } from './utils/selectors.js';
+import { selectors } from '../../../../utils/selectors.js';
 
 declare global {
   interface Window {
-    LLUtils: any;
+    LLUtils: {
+      googlePayPaymentRequest: { orderShipType: string };
+      publish: (event: string, data: unknown) => void;
+    };
     mockGooglePayHandler: () => Promise<{
-      success: boolean;
-      redirectURL: string;
-      authToken?: string;
+      redirectURL?: string;
+      formError?: boolean;
+      formExceptions?: unknown;
     }>;
   }
 }
@@ -35,8 +38,8 @@ test('Google Pay checkout flow with fallback confirmation page', async ({ page }
 
   // --- Step 2: Setup mock Google Pay handler ---
   await page.exposeFunction('mockGooglePayHandler', async () => ({
-    success: true,
-    redirectURL: 'https://wwwtest.lakeshorelearning.com/order-confirmation-page/'
+    redirectURL: 'https://wwwtest.lakeshorelearning.com/order-confirmation-page/',
+    formError: false
   }));
 
   await page.addInitScript(() => {

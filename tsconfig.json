@@ -10,6 +10,6 @@
     "outDir": "dist", // or "build"
     "types": ["node", "playwright"]
   },
-  "include": ["src", "tests"],
+  "include": ["src", "tests", "utils"],
   "exclude": ["node_modules", "dist"]
 }
