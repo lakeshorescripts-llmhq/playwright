@@ -4,6 +4,36 @@ import { Page, expect } from '@playwright/test';
 export class CheckoutPage {
   constructor(private page: Page) {}
 
+  async waitForCheckoutPage() {
+    console.log('⏳ Waiting for checkout page to load');
+    await this.page.waitForURL(/checkout-page/);
+    await this.page.waitForLoadState('domcontentloaded');
+  }
+
+  async handleAddressVerification() {
+    console.log('🏠 Handling address verification');
+    const addressVerification = this.page.getByRole('heading', { name: 'Address Verification' });
+    await expect(addressVerification).toBeVisible();
+
+    const suggestedAddress = this.page.getByRole('heading', { name: 'Suggested Address' });
+    await expect(suggestedAddress).toBeVisible();
+    await suggestedAddress.click();
+
+    const selectAddressButton = this.page.getByRole('button', { name: 'Select Address' });
+    await expect(selectAddressButton).toBeVisible();
+    await selectAddressButton.click();
+    await expect(addressVerification).not.toBeVisible();
+  }
+
+  
+
+  async verifyOrderCompletion() {
+    console.log('🎉 Verifying order completion');
+    await this.page.waitForLoadState('domcontentloaded');
+    await expect(this.page.getByRole('heading', { name: 'Thank you for your order!' })).toBeVisible({ timeout: 10000 });
+    await expect(this.page.getByText('Order Total:')).toBeVisible();
+  }
+
   async fillEmailAddress(emailContact: Record<string, string>) {
     console.log('✉️ Filling email address');
     await expect(this.page.getByTestId('contactEmail')).toBeVisible();

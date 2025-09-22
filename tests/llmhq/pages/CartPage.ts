@@ -24,6 +24,42 @@ export class CartPage {
         }
     }
 
+    async clickApplePay() {
+        console.log('💳 Proceeding with Apple Pay...');
+        await this.page.waitForLoadState('domcontentloaded');
+        
+        // Log all button roles for debugging
+        console.log('🔍 Looking for payment buttons...');
+        const buttons = await this.page.getByRole('button').all();
+        for (const button of buttons) {
+            const name = await button.getAttribute('name') || await button.innerText();
+            console.log(`Found button: ${name}`);
+        }
+        
+        // Try different selectors for Apple Pay button
+        const selectors = [
+            this.page.getByRole('button', { name: 'Apple Pay' }),
+            this.page.locator('button:has-text("Apple Pay")'),
+            this.page.locator('[aria-label="Apple Pay"]'),
+            this.page.locator('.apple-pay-button')
+        ];
+        
+        let applePayButton;
+        for (const selector of selectors) {
+            if (await selector.isVisible({ timeout: 2000 }).catch(() => false)) {
+                applePayButton = selector;
+                console.log('✅ Found Apple Pay button!');
+                break;
+            }
+        }
+        
+        if (!applePayButton) {
+            throw new Error('Apple Pay button not found after trying multiple selectors');
+        }
+        
+        await applePayButton.click();
+    }
+
     async checkout() {
         console.log('🛒 Proceeding to checkout...');
         const checkout = this.page.getByRole('button', { name: 'Checkout' });

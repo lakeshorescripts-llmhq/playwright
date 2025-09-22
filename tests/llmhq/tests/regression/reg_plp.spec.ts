@@ -30,8 +30,37 @@ test.describe('PLP Regression Tests', () => {
         await page.waitForLoadState('domcontentloaded');
     });
 
+    /* Product Listing Page Tests Placeholders */
     
-  
+    // test('Category Landing Page Hero - validate hero banner content and links');
+    
+    // test('Category Landing Page Links - validate all subcategory links are displayed correctly');
+    
+    // test('Product Cards - validate all product information is displayed correctly');
+    
+    // test('Product Quick View - validate quick view modal functionality');
+    
+    // test('Add to Cart - validate add to cart from PLP functionality');
+    
+    // test('Price Filters - validate price range filter functionality');
+    
+    // test('Category Filters - validate category filter functionality');
+    
+    // test('Multiple Filters - validate applying multiple filters simultaneously');
+    
+    // test('Clear Filters - validate clearing individual and all filters');
+    
+    // test('Search Within - validate search within category functionality');
+    
+    // test('Out of Stock Products - validate out of stock product display');
+    
+    // test('Product Variants - validate product variant selection on PLP');
+    
+    // test('Product Ratings - validate product ratings and reviews display');
+    
+    // test('Product Compare - validate product comparison functionality');
+    
+    // test('Mobile Layout - validate responsive design for mobile viewport');
 
   test('Page should load correctly', async ({page}) => {
     await homePage.clickGiftCards();
@@ -158,126 +187,55 @@ test.describe('PLP Regression Tests', () => {
     await categoryPage.selectSortOption(sortOption);
   });
 
+  test('Items Per Page Dropdown', async ({ page }) => {
+    test.setTimeout(90000);
 
-  /*
-  test('Items Per Page', async () => {
-    // validate select each option from the Items per page dropdown displays the number of page results in the selected option
+    // Navigate to category page and handle banner
+    await homePage.hoverShopAll();
+    await homePage.selectCategoryLink(locators.activePlay);
+
+    // Wait for initial page load
+    await page.waitForLoadState('domcontentloaded');
+    await page.waitForLoadState('networkidle');
+
+    // Find and verify product cards
+    const productSelector = '[class*="product-card"] img[alt]';
+    await page.waitForSelector(productSelector, { state: 'visible' });
+
+    // Find items per page dropdown
+    const itemsPerPageDropdown = page.locator('select').filter({ hasText: 'Per Page' }).first();
+    await expect(itemsPerPageDropdown).toBeVisible();
+
+    // Test each page size option
+    for (const pageSize of ['24', '48', '96']) {
+      // Set up navigation promise
+      const navigationPromise = page.waitForResponse(
+        res => res.url().includes('/products/active-play/') && res.status() === 200
+      );
+
+      // Select new page size and wait for update
+      await itemsPerPageDropdown.selectOption({ label: `${pageSize} Per Page` });
+      await navigationPromise;
+      await page.waitForLoadState('networkidle');
+
+      // Scroll to ensure all products load
+      await page.evaluate(() => window.scrollTo(0, 0));
+
+      // Wait for and count visible products
+      await page.waitForSelector(productSelector, { state: 'visible' });
+      const visibleProducts = await page.locator(productSelector).all();
+
+      // Verify selected option
+      const selectedText = await itemsPerPageDropdown.inputValue();
+      expect(selectedText).toBe(`${pageSize} Per Page`);
+
+      // Verify URL pattern
+      expect(page.url()).toContain(`/num-${pageSize}/`);
+
+      // Verify product count
+      expect(visibleProducts.length).toBeGreaterThan(0);
+      expect(visibleProducts.length).toBeLessThanOrEqual(Number(pageSize));
+    }
   });
-
-  test('Pagination', async () => {
-    // validate pagination functionality at the top and bottom of the page functions properly
-  });
-
-  test('Narrow By Availability', async () => {
-    // valdate selecting an option under this filter updates the page results accordingly
-  });
-
-  test('Narrow By Category', async () => {
-    // valdate selecting an option under this filter updates the page results accordingly
-  });
-
-  test('Narrow By Product Use', async () => {
-    // valdate selecting an option under this filter updates the page results accordingly
-  });
-
-  test('Narrow By Grade', async () => {
-    // valdate selecting an option under this filter updates the page results accordingly
-  });
-
-  test('Narrow By Age', async () => {
-    // valdate selecting an option under this filter updates the page results accordingly
-  });
-
-  test('Narrow By Price', async () => {
-    // valdate selecting an option under this filter updates the page results accordingly
-  });
-
-  test('Narrow By Color or Pattern', async () => {
-    // valdate selecting an option under this filter updates the page results accordingly
-  });
-
-  test('Narrow By Celebration or Season', async () => {
-    // valdate selecting an option under this filter updates the page results accordingly
-  });
-
-  test('Narrow By Collection', async () => {
-    // valdate selecting an option under this filter updates the page results accordingly
-  });
-
-  test('Regular Price', async () => {
-    // validate the product displays accurate price in black color text (ie: "$10.00")
-  });
-
-  test('Regular Price Range', async () => {
-    // validate the product displays accurate price range in black color text (ie: $1.99 - $5.99)
-  });
-
-  test('Sale Price', async () => {
-    // validate the product displays accurate sale price in red color text and the regular price displays below the sale price in black text (ie: "reg. $19.99")
-  });
-
-  test('Sale Price Price', async () => {
-    // validate the product displays accurate sale price raneg in red color text and the regular price range displays  below the sale price range in black text (ie: "reg. $19.99 - $29.99")
-  });
-
-  test('Store Pickup Only Items', async () => {
-    // validate the store pickup only item displays "Store Pickup Only" and "FREE Store Pickup"
-  });
-
-  test('Links in List View', async () => {
-    // validate links displays for products in List View are functioning properly (ie: LC763)
-  });
-
-  test('Review Count Display', async () => {
-    // validate links displays for products in List View are functioning properly (ie: LC763)
-  });
-
-  test('Links in List View', async () => {
-    // validate links displays for products in List View are functioning properly (ie: LC763)
-  });
-
-  test('Store Pickup Help Icon Under Narrow By Availabiltiy', async () => {
-    // validate links displays for products in List View are functioning properly (ie: LC763)
-  });
-
-  test('If No Products are Available with the Selected Store', async () => {
-    // validate links displays for products in List View are functioning properly (ie: LC763)
-  });
-
-  test('Links in List View', async () => {
-    // validate links displays for products in List View are functioning properly (ie: LC763)
-  });
-
-  test('Doorbuster Products', async () => {
-    // validate links displays for products in List View are functioning properly (ie: LC763)
-  });
-
-  test('GSA Products', async () => {
-    // validate links displays for products in List View are functioning properly (ie: LC763)
-  });
-
-  test('Presell Products', async () => {
-    // validate links displays for products in List View are functioning properly (ie: LC763)
-  });
-
-  test('Exclusive Products', async () => {
-    // validate links displays for products in List View are functioning properly (ie: LC763)
-  });
-
-  test('Disruptor Tiles', async () => {
-    // validate links displays for products in List View are functioning properly (ie: LC763)
-  });
-
-  test('Disruptor Banner', async () => {
-    // validate banner display properly with 1-3 buttons and buttons are functional
-  });
-
-
-*/
-
-
-
-
-
 
 });

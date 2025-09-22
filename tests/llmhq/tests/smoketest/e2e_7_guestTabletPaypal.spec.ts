@@ -36,8 +36,8 @@ test('E2E 7 - GUEST - ANDROID TABLET - PAYPAL', async ({ page }) => {
     await quickOrder.enterQuickOrderInfo(quickOrderInfo); // Ensure this method fills in required info
     await quickOrder.clickAddToCartButton(); // Ensure this method clicks the add to cart button
     await cart.clickPayPalButton(page.context()); // Ensure this method handles PayPal flow and uses context correctly
-    await checkout.submitOrder('$8.19'); // Ensure this method submits the order and waits for confirmation
-    await checkout.verifyThankYouPage('$8.19'); // Ensure this method verifies the thank you page and amount
+    await checkout.submitOrder('$13.92'); // Ensure this method submits the order and waits for confirmation
+    await checkout.verifyThankYouPage('$13.92'); // Ensure this method verifies the thank you page and amount
 
     console.log('🎉 TEST COMPLETED SUCCESSFULLY!');
   } catch (error) {

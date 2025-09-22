@@ -5,14 +5,14 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "pretest": "tsc --noEmit && eslint tests/**",
+    "pretest": "tsc --noEmit && eslint \"tests/**/*.ts\"",
     "test": "playwright test",
-    "postinstall": "npm update browserstack-node-sdk",
-    "smoketest": "playwright test tests/llmhq/tests/smoketest",
-    "regression": "playwright test tests/llmhq/tests/regression",
-    "build": "tsc --clean && tsc",
-    "clean": "rimraf dist",
-    "start": "node dist/validate-files.js"
+    "test:smoke": "playwright test tests/llmhq/tests/smoketest",
+    "test:regression": "playwright test tests/llmhq/tests/regression",
+    "test:parallel": "playwright test --workers=4",
+    "report": "playwright show-report",
+    "clean": "rimraf dist test-results playwright-report screenshots storage",
+    "validate": "node dist/validate-files.js"
   },
   "keywords": [],
   "author": "",
