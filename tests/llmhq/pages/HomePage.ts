@@ -29,9 +29,11 @@ export class HomePage {
     
     if (await searchField1.isVisible()) {
       await searchField1.focus();
+      await searchField1.click();
     }
     else if (await searchField2.isVisible()) {
       await searchField2.focus();
+      await searchField2.click();
     }
     else {
       throw new Error('No search field is visible');

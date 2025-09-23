@@ -11,6 +11,9 @@ console.log('E2E 11 - SIGNED IN - LAKESHORE BUCKS - CREDIT CARD');
 
 test('E2E 11 - SIGNED IN - LAKESHORE BUCKS - CREDIT CARD', async ({ page }) => {
   console.log('✅ Test started: Complete checkout flow');
+  // Configure tests to run serial (one after another) or parallel (same time based on # workers)
+  test.describe.configure({ mode: 'serial' });
+    
 
   const home = new HomePage(page);
   const product = new ProductPage(page);

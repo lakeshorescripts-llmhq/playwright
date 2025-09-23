@@ -4,7 +4,7 @@ import { searchData } from '../../test-data/searchData';
 import { productData } from '../../test-data/productData';
 
 test.describe('Search Regression Tests', () => {
-    // Configure tests to run serially (one after another) or parallel (same time based on # workers)
+    // Configure tests to run serial (one after another) or parallel (same time based on # workers)
     test.describe.configure({ mode: 'parallel' });
     
     let homePage: HomePage;
@@ -45,10 +45,14 @@ test.describe('Search Regression Tests', () => {
         await homePage.pressEnterKey();
         
         // Wait for search results to load
-        await page.waitForLoadState('domcontentloaded');
+        await page.waitForURL(new RegExp(`/search/`, 'i'), { timeout: 10000 });
+        await page.waitForLoadState('load');
+        await page.waitForTimeout(1000);
         
         // Go back to home page
         await homePage.navigateTo();
+        await page.waitForLoadState('domcontentloaded');
+        await page.waitForTimeout(1000);
         
         // Focus the search field to trigger the type-ahead popup
         await homePage.focusSearchField();
@@ -56,7 +60,7 @@ test.describe('Search Regression Tests', () => {
         // Wait a bit for the popup to appear
         await page.waitForTimeout(1000);
         
-        // Verify the recently viewed popup is visible
+        // Verify the recently viewed popup is visible  
         await expect(page.getByRole('heading', { name: 'Recent Searches:' })).toBeVisible();
         
         // Verify the recently viewed item contains our search keyword
