@@ -8,6 +8,7 @@ playwright-report/
 screenshots/
 storage/
 har/
+*.png
 
 # Environment
 .env
