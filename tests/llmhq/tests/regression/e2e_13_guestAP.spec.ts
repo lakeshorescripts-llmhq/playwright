@@ -9,7 +9,7 @@ import { CheckoutPage } from '../../pages/CheckoutPage.js';
 
 declare global {
   interface Window {
-    LLUtils: {
+    LLUtils2: {
       applePayPaymentRequest?: { orderShipType: string };
       publish: (event: string, data: unknown) => void;
     };

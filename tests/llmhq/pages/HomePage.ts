@@ -87,25 +87,24 @@ export class HomePage {
   }
 
   async closeConsentBanner() {
-  const customizeButton = this.page.getByRole('button', { name: 'Customize, Opens the' });
-  const xButton = this.page.getByRole('button', { name: 'Close' }).last();
+    const customizeButton = this.page.getByRole('button', { name: 'Customize, Opens the' });
+    const xButton = this.page.getByRole('button', { name: 'Close' }).last();
   
-  await this.page.waitForTimeout(2000);
-  // Wait for banner to appear (if it does)
-  if (await customizeButton.isVisible({ timeout: 5000 }).catch(() => false)) {
-    console.log('🍪 Cookie banner detected. Clicking X to close consent banner...');
-    
-    // Wait for button to be enabled and click
-    await expect(xButton).toBeEnabled();
-    await xButton.click();
+    await this.page.waitForTimeout(2000);
+    // Wait for banner to appear (if it does)
+    if (await customizeButton.isVisible({ timeout: 5000 }).catch(() => false)) {
+      console.log('🍪 Cookie banner detected. Clicking X to close consent banner...');
+      // Wait for button to be enabled and click
+      await expect(xButton).toBeEnabled();
+      await xButton.click();
 
-    // Wait for banner to disappear
-    await expect(customizeButton).toBeHidden({ timeout: 10000 });
-    console.log('✅ Cookie banner dismissed.');
-  } else {
+      // Wait for banner to disappear
+      await expect(customizeButton).toBeHidden({ timeout: 10000 });
+      console.log('✅ Cookie banner dismissed.');
+    } else {
     console.log('🚫 No cookie banner found. Skipping...');
+    }
   }
-}
 
 
 
