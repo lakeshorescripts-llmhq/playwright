@@ -19,3 +19,11 @@ package-lock.json
 # IDE
 .vscode/
 *.code-workspace
+
+# Other
+log/
+*.har
+launch.json
+suppression.xml
+quarantine/
+mcp.json
