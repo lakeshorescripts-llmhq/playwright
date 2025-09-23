@@ -331,12 +331,15 @@ export class CheckoutPage {
     expect(url).not.toMatch(/^https:\/\/oclive.*\.llmhq\.com/);
     await expect(this.page.getByText(expectedTotal).last()).toBeVisible();
     const submitButton = this.page.getByRole('button', { name: 'Submit Order' });
-    await (submitButton).click();
+    await Promise.all([
+      this.page.waitForURL(/order-confirmation-page/, { timeout: 30000 }),
+      submitButton.click(),
+    ]);
   }
 
   async verifyThankYouPage(expectedTotal: string) {
   console.log('✅ Verifying Thank You page');
-  await expect(this.page).toHaveURL(/order-confirmation-page/, { timeout: 30000 });
+
 
   const thankYouHeading = this.page.getByRole('heading', { name: /Thank You/i });
   await expect(thankYouHeading).toBeVisible({ timeout: 10000 });
