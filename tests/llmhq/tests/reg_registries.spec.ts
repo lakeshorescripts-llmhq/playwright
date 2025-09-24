@@ -9,7 +9,7 @@ test.describe('Registries Page Regression Tests', () => {
     let home: HomePage;
     let registriesPage: RegistriesPage;
 
-    test.beforeEach(async ({ page }) => {
+    test.beforeEach(async ({ pxage }) => {
         home = new HomePage(page);
         registriesPage = new RegistriesPage(page);
         await home.closeConsentBanner();

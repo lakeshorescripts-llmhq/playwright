@@ -76,7 +76,10 @@ export class ClearTheList {
 
   async deleteList() {
     await this.page.goto('/my-shoppinglist-page/');
-    await this.page.waitForLoadState('networkidle');
+    await Promise.race([
+        this.page.getByRole('button', { name: ' Edit' }).first().waitFor(),
+        this.page.getByRole('heading', { name: /It doesn’t look like you’ve/ }).waitFor()
+    ]);
     await this.page.waitForTimeout(1000); // buffer for UI update
     const editButtonLocator = this.page.getByRole('button', { name: ' Edit' });
     while (await editButtonLocator.count() > 0) {
@@ -92,7 +95,10 @@ export class ClearTheList {
       await expect(confirmDeleteButton).toBeEnabled();
       await confirmDeleteButton.click();
       // Wait for UI to settle before checking again
-      await this.page.waitForLoadState('networkidle');
+      await Promise.race([
+          this.page.getByRole('button', { name: ' Edit' }).first().waitFor(),
+          this.page.getByRole('heading', { name: /It doesn’t look like you’ve/ }).waitFor()
+      ]);
       await this.page.waitForTimeout(1000);
     }
   console.log('✅ All shopping lists have been deleted.');

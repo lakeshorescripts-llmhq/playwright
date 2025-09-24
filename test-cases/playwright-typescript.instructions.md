@@ -10,6 +10,12 @@ applyTo: '**'
 - **Assertions**: Use auto-retrying web-first assertions. These assertions start with the `await` keyword (e.g., `await expect(locator).toHaveText()`). Avoid `expect(locator).toBeVisible()` unless specifically testing for visibility changes.
 - **Timeouts**: Rely on Playwright's built-in auto-waiting mechanisms. Avoid hard-coded waits or increased default timeouts.
 - **Clarity**: Use descriptive test and step titles that clearly state the intent. Add comments only to explain complex logic or non-obvious interactions.
+- **Error Handling**: Avoid try-catch blocks unless absolutely necessary. Let tests fail naturally to surface issues.
+- **Reusability**: Leverage the existing Page Object Model (POM) framework for reusable components and actions. Avoid duplicating code across tests.
+- **Performance**: Write efficient tests that minimize unnecessary actions or page reloads. Use `test.describe.configure({ mode: 'parallel' })` to run independent tests concurrently.
+- **Maintainability**: Regularly review and refactor tests to ensure they remain relevant and effective as the application evolves.
+- **Version Control**: Commit test code to version control with clear commit messages. Use branches for significant changes or new features.
+
 
 
 ### Test Structure
@@ -20,10 +26,24 @@ applyTo: '**'
 - **Framework**: Leverage the existing Page Object Model (POM) framework for reusable components and actions.
 
 
+
 ### File Organization
 - **Location**: Store all test files in the `tests/` directory.
 - **Naming**: Use the convention `<feature-or-page>.spec.ts` (e.g., `login.spec.ts`, `search.spec.ts`).
 - **Scope**: Aim for one test file per major application feature or page.
+- **Modularity**: Break down large test files into smaller, focused files as needed.
+- **Test Data**: Store test data in the `test-data/` directory, using separate files for locators and data variables.
+- **Page Objects**: Store reusable page components and actions in the `pages/` directory.
+- **Utilities**: Place helper functions and custom matchers in the `utils/` directory.
+- **Configuration**: Keep Playwright configuration in `playwright.config.ts` at the root level.
+- **Fixtures**: Define custom fixtures in `fixtures/` if needed for shared setup or teardown logic.
+- **Reports**: Configure test reports to be generated in the `reports/` directory for easy access and review.
+- **Screenshots**: Store screenshots in the `screenshots/` directory, organized by test run date or feature.
+- **Videos**: Save test execution videos in the `videos/` directory for debugging purposes.
+- **Logs**: Maintain logs in the `logs/` directory for tracking test execution details.
+- **Version Control**: Use `.gitignore` to exclude sensitive data, node modules, and large files from version control.
+- **Documentation**: Maintain a `docs/` directory for any additional documentation related to testing practices or guidelines.
+- **Dependencies**: Keep `package.json` and `package-lock.json` at the root level for managing project dependencies.
 
 ### Assertion Best Practices
 - **UI Structure**: Use `toMatchAriaSnapshot` to verify the accessibility tree structure of a component. This provides a comprehensive and accessible snapshot.
@@ -102,3 +122,6 @@ Before finalizing tests, ensure:
 - [ ] Assertions are meaningful and reflect user expectations
 - [ ] Tests follow consistent naming conventions
 - [ ] Code is properly formatted and commented
+- [ ] Tests are efficient and avoid unnecessary waits or actions
+- [ ] Tests are maintainable and reusable components are leveraged
+- [ ] Test data is managed effectively and avoids hard-coded values

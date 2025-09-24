@@ -34,7 +34,7 @@ test('Google Pay checkout flow with fallback confirmation page', async ({ page }
   await page.locator(selectors.searchButton).click();
   await page.locator(selectors.addToCart).click();
   await page.getByTestId('add-to-cart-checkout').click();
-  await page.waitForLoadState('networkidle');
+  await expect(page.getByRole('button', { name: 'Google Pay' })).toBeVisible();
 
   // --- Step 2: Setup mock Google Pay handler ---
   await page.exposeFunction('mockGooglePayHandler', async () => ({

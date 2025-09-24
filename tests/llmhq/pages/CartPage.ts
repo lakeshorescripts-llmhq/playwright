@@ -99,40 +99,46 @@ export class CartPage {
         await this.page.waitForLoadState('domcontentloaded');
 
         const emptyCartMessage = this.page.getByRole('heading', { name: 'An empty cart is full of' }).first();
-        const isCartEmpty = await emptyCartMessage.isVisible();
-        await this.page.waitForTimeout(2000);
-
-        if (isCartEmpty) {
+        
+        await this.page.waitForLoadState('networkidle');
+        
+        if (await emptyCartMessage.isVisible()) {
             console.log('🛒 Cart is already empty.');
             return;
         }
 
         while (!(await emptyCartMessage.isVisible())) {
-            const ellipsesShip = this.page.locator('#shipItem-0-actions').nth(0);
-            const ellipsesStore = this.page.locator('#storePickup-0-actions').nth(0);
-            const ellipsesEmail = this.page.locator('#emailDelivery-0-actions').nth(0);
+            const ellipsesShip = this.page.locator('#shipItem-0-actions').first();
+            const ellipsesStore = this.page.locator('#storePickup-0-actions').first();
+            const ellipsesEmail = this.page.locator('#emailDelivery-0-actions').first();
 
-            if (await ellipsesShip.isVisible()) {
-                await ellipsesShip.click();
-                await this.page.getByRole('button', { name: 'Remove Item' }).click();
-                await expect(this.page.getByRole('button', { name: 'Remove Item' })).toBeHidden();
-            } else if (await ellipsesStore.isVisible()) {
-                await ellipsesStore.click();
-                await this.page.getByRole('button', { name: 'Remove Item' }).click();
-                await expect(this.page.getByRole('button', { name: 'Remove Item' })).toBeHidden();
-            } else if (await ellipsesEmail.isVisible()) {
-                await ellipsesEmail.click();
-                await this.page.getByRole('button', { name: 'Remove Item' }).click();
-                await expect(this.page.getByRole('button', { name: 'Remove Item' })).toBeHidden();
+            try {
+                if (await ellipsesShip.isVisible({timeout: 5000})) {
+                    await ellipsesShip.click();
+                    await this.page.getByRole('button', { name: 'Remove Item' }).click();
+                    await this.page.waitForLoadState('networkidle');
+                } else if (await ellipsesStore.isVisible({timeout: 5000})) {
+                    await ellipsesStore.click();
+                    await this.page.getByRole('button', { name: 'Remove Item' }).click();
+                    await this.page.waitForLoadState('networkidle');
+                } else if (await ellipsesEmail.isVisible({timeout: 5000})) {
+                    await ellipsesEmail.click();
+                    await this.page.getByRole('button', { name: 'Remove Item' }).click();
+                    await this.page.waitForLoadState('networkidle');
+                } else {
+                    break;
+                }
+            } catch (error) {
+                if (error.message.includes('detached')) {
+                    console.warn('Element detached during cart clearing, the cart is likely empty now.');
+                    break; 
+                } else {
+                    throw error;
+                }
             }
         }
 
-        await this.page.waitForTimeout(1000);
-        const finalCheck = await emptyCartMessage.isVisible();
-
-        if (!finalCheck) {
-            throw new Error('Cart is not empty after attempting to remove all items.');
-        }
+        await expect(emptyCartMessage).toBeVisible({ timeout: 10000 });
 
         console.log('🛒 Cart is now empty.');
     }
