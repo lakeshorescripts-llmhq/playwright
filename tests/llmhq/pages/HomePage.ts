@@ -149,28 +149,43 @@ export class HomePage {
     await this.page.click(`text=${subCategoryName}`);
   }
 
-  async performSearch(searchInput: string) {
-    console.log(`🔍 Searching for: ${searchInput}`);
-    await this.page.waitForLoadState('load');
-    const searchFieldKO = this.page.getByRole('textbox', { name: 'Search:' });
-    const searchFieldReact = this.page.getByTestId('search-product-input');
-    if (await searchFieldKO.isVisible()) {
-      await searchFieldKO.click();
-      await this.page.waitForTimeout(1000);
+ async performSearch(searchInput: string) {
+  console.log(`🔍 Searching for: ${searchInput}`);
+  await this.page.waitForLoadState('domcontentloaded');
+
+  const searchFieldKO = this.page.getByRole('textbox', { name: 'Search:' });
+  const searchFieldReact = this.page.getByTestId('search-product-input');
+
+  try {
+    // Wait for either search field to be visible and enabled
+    await Promise.any([
+      expect(searchFieldKO).toBeVisible({ timeout: 3000 }),
+      expect(searchFieldReact).toBeVisible({ timeout: 3000 }),
+    ]);
+
+    if (await searchFieldKO.isVisible() && await searchFieldKO.isEnabled()) {
+      console.log('🧭 Using Knockout search field');
+      // await searchFieldKO.click();
+      // await expect(searchFieldKO).toBeFocused();
       await searchFieldKO.fill(searchInput);
       await searchFieldKO.press('Enter');
-      //await searchButtonKO.click();
-    } else if (await searchFieldReact.isVisible()) {
-      await searchFieldReact.click();
-      await this.page.waitForTimeout(1000);
+    } else if (await searchFieldReact.isVisible() && await searchFieldReact.isEnabled()) {
+      console.log('🧭 Using React search field');
+      // await searchFieldReact.click();
+      // await expect(searchFieldReact).toBeFocused();
       await searchFieldReact.fill(searchInput);
       await searchFieldReact.press('Enter');
-      //await searchButtonReact.click();
     } else {
-      console.error('❌ Neither search field was visible.');
-      throw new Error('Neither locator matched any visible element.');
+      throw new Error('❌ Neither search field was interactable.');
     }
+
+    console.log('✅ Search completed and results loaded.');
+  } catch (error) {
+    console.error('❌ Search failed:', error);
+    throw new Error('Search input fields were not available or interactable.');
   }
+}
+
 
 
   async inputSearchTerm(searchInput: string) {
