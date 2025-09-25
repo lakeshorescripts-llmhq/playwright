@@ -2,6 +2,7 @@ import { Page, expect } from '@playwright/test';
 import { CategoryRole } from '../types/category';
 import path from 'path/win32';
 import fs from 'fs';
+import { User } from '../test-data/accountData';
 
 export class HomePage {
   readonly page: Page;
@@ -133,7 +134,7 @@ export class HomePage {
     await expect(this.page.getByRole('heading', { name: 'Furniture Types' })).toBeVisible();
   }
 
-  async selectCategory(categoryName: Record<string, string>) {
+  async selectCategory(categoryName: { name: string }) {
     console.log(`📦 Clicking on "${categoryName.name}" category...`);
     await this.page.waitForLoadState('load');
     await this.page.click(`text=${categoryName.name}`);
@@ -230,11 +231,13 @@ export class HomePage {
     await signInButton.click();
   }
 
-  async enterSignInCredentials(auth: Record<string, string>) {
+  async enterSignInCredentials(auth: User) {
     await this.page.waitForLoadState('load');
     await expect(this.page.getByTestId('submit-button-signin')).toBeVisible();
     await this.page.getByTestId('input-signin-email').fill(auth.email);
-    await this.page.getByTestId('input-signin-password').fill(auth.password);
+    if (auth.password) {
+      await this.page.getByTestId('input-signin-password').fill(auth.password);
+    }
     await this.page.getByTestId('submit-button-signin').click();
   }
 
