@@ -1,0 +1,45 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "pretest": "tsc --noEmit && eslint \"tests/**/*.ts\"",
+    "test": "playwright test",
+    "test:smoke": "playwright test tests/llmhq/tests/smoketest",
+    "test:regression": "playwright test tests/llmhq/tests/regression",
+    "test:parallel": "playwright test --workers=4",
+    "report": "playwright show-report",
+    "clean": "rimraf dist test-results playwright-report screenshots storage",
+    "validate": "node dist/validate-files.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.1",
+    "@eslint/js": "^9.35.0",
+    "@faker-js/faker": "^10.0.0",
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.3.0",
+    "@types/user-agents": "^1.0.4",
+    "browserstack-node-sdk": "^1.42.6",
+    "eslint": "^9.35.0",
+    "jq": "^1.7.2",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.44.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "marked": "^16.3.0",
+    "playwright-msteams-reporter": "^0.0.12",
+    "user-agents": "^1.1.660",
+    "zerostep": "^1.2.1"
+  },
+  "directories": {
+    "test": "tests"
+  }
+}

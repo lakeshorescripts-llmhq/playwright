@@ -1,0 +1,18 @@
+export type ValidRole =
+  | 'button'
+  | 'checkbox'
+  | 'radio'
+  | 'link'
+  | 'textbox'
+  | 'heading'
+  | 'img'
+  | 'listitem'
+  | 'option'
+  | 'tab'
+  | 'tabpanel'
+  | 'combobox'
+  | 'menuitem'
+  | 'row'
+  | 'cell'
+  | 'columnheader'
+  | 'rowheader';

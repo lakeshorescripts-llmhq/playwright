@@ -1,0 +1,161 @@
+name: Security Scan
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  schedule:
+    - cron: '0 0 * * 0'  # Run weekly on Sundays
+  workflow_dispatch:  # Allow manual triggering
+
+permissions:
+  contents: read
+  security-events: write
+  actions: read
+  issues: write
+
+jobs:
+  security-scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Fetch all history for all branches and tags
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+        
+      # npm audit with better error handling
+      - name: Run npm audit
+        run: |
+          echo "Running npm audit..."
+          if npm audit --audit-level=moderate; then
+            echo "✅ npm audit passed"
+          else
+            echo "⚠️ npm audit found issues"
+            npm audit > npm-audit.txt
+            echo "Full audit report saved to npm-audit.txt"
+          fi
+
+      # Snyk scan with retries and better configuration
+      - name: Run Snyk security scan
+        uses: snyk/actions/node@master
+        continue-on-error: false  # Fail the workflow if high severity issues found
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          args: >
+            --all-projects 
+            --severity-threshold=high
+            --fail-on=all
+            --sarif-file-output=snyk-results.sarif
+
+      # Upload Snyk results to GitHub Security tab
+      - name: Upload Snyk results to GitHub Code Scanning
+        uses: github/codeql-action/upload-sarif@v2
+        if: always()  # Run even if previous step fails
+        with:
+          sarif_file: snyk-results.sarif
+          category: Snyk
+
+      # Check for hardcoded secrets
+      - name: Run secret scanning
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_CONFIG: .gitleaks.toml
+        with:
+          config-path: .gitleaks.toml
+          verbose: true
+          redact: true
+
+      # Software composition analysis
+      - name: Run OWASP Dependency-Check
+        uses: dependency-check/Dependency-Check_Action@main
+        with:
+          project: "Playwright Tests"
+          path: "."
+          format: "HTML"
+          out: "reports/dependency-check"
+          args: >
+            --failOnCVSS 7
+            --enableRetired
+            --enableExperimental
+            --suppression suppression.xml
+
+      # Run Playwright-specific security checks
+      - name: Run Playwright security checks
+        run: |
+          echo "Checking for security best practices..."
+          
+          # Check for unsafe file access patterns
+          if grep -r "page.evaluate.*require.*fs" . --include="*.ts" --include="*.js"; then
+            echo "⚠️ WARNING: Found potentially unsafe file system access in browser context"
+          fi
+          
+          # Check for insecure content policies
+          if grep -r "bypassCSP: true" . --include="*.ts" --include="*.js"; then
+            echo "⚠️ WARNING: Found CSP bypass in browser context"
+          fi
+
+      # Aggregate and upload all results
+      - name: Prepare scan results
+        if: always()
+        run: |
+          mkdir -p security-reports
+          mv reports/dependency-check/* security-reports/ || true
+          mv npm-audit.txt security-reports/ || true
+          mv snyk-results.sarif security-reports/ || true
+          
+          # Create summary
+          echo "# Security Scan Summary" > security-reports/SUMMARY.md
+          echo "## Scan Results" >> security-reports/SUMMARY.md
+          echo "- Completed at: $(date)" >> security-reports/SUMMARY.md
+          
+          if [ -f "security-reports/npm-audit.txt" ]; then
+            echo "## npm Audit Findings" >> security-reports/SUMMARY.md
+            cat security-reports/npm-audit.txt >> security-reports/SUMMARY.md
+          fi
+
+      - name: Upload security scan results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: security-scan-results
+          path: security-reports/
+          retention-days: 30
+
+      # Notify on critical findings
+      - name: Check for critical findings
+        if: failure()
+        run: |
+          if [ -f "security-reports/npm-audit.txt" ] && grep -i "critical" security-reports/npm-audit.txt; then
+            echo "::warning ::Critical security vulnerabilities found!"
+            exit 1
+          fi
+
+      - name: Create issue for critical findings
+        if: failure()
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const summary = fs.readFileSync('security-reports/SUMMARY.md', 'utf8');
+            
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '🚨 Critical Security Issues Found',
+              body: summary,
+              labels: ['security', 'high-priority']
+            });

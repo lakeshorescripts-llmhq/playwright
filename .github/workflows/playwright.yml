@@ -1,0 +1,142 @@
+name: Playwright Tests
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  schedule:
+    - cron: '0 0 * * *'  # Run daily at midnight
+
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+        shard: [1/4, 2/4, 3/4, 4/4]  # Split tests into 4 parallel shards
+
+    # Environment setup and permissions
+    permissions:
+      contents: read
+      id-token: write
+      checks: write
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Validate Environment
+      shell: bash
+      run: |
+        echo "Checking required environment variables..."
+        
+        # Define required variables
+        required_vars=(
+          "PLAYWRIGHT_USERNAME"
+          "PLAYWRIGHT_PASSWORD"
+        )
+        
+        # Check if secrets exist using GitHub's special test syntax
+        for var in "${required_vars[@]}"; do
+          if [[ ! "${{ toJSON(secrets) }}" =~ $var ]]; then
+            echo "::error::Missing required secret: $var"
+            echo "Please configure this secret in repository settings"
+            exit 1
+          fi
+        done
+        
+        echo "✓ Environment validation successful"
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Install Playwright Browsers
+      run: npx playwright install --with-deps
+
+    - name: Run Playwright tests
+      run: |
+        echo "Starting Playwright tests (Shard ${{ matrix.shard }})"
+        
+        # Setup test directories
+        mkdir -p test-artifacts/traces
+        mkdir -p test-artifacts/screenshots
+        
+        # Run tests with comprehensive configuration
+        npx playwright test \
+          --shard ${{ matrix.shard }} \
+          --reporter=dot,html,json \
+          --trace retain-on-failure \
+          --update-snapshots \
+          --workers=1 \
+          --retries=2 || \
+        (
+          echo "::error::Tests failed - check artifacts for details"
+          exit 1
+        )
+      env:
+        # Core settings
+        CI: 'true'
+        NODE_ENV: 'test'
+        
+        # Test credentials (securely accessed)
+        PLAYWRIGHT_USERNAME: ${{ secrets.PLAYWRIGHT_USERNAME }}
+        PLAYWRIGHT_PASSWORD: ${{ secrets.PLAYWRIGHT_PASSWORD }}
+        
+        # Test configuration
+        PLAYWRIGHT_BROWSER: 'chromium'
+        PLAYWRIGHT_HEADLESS: 'true'
+        PLAYWRIGHT_WORKERS: '1'
+        PLAYWRIGHT_TEST_TIMEOUT: '60000'
+
+    - name: Upload test results
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: playwright-report-${{ matrix.shard }}
+        path: |
+          playwright-report/
+          test-results/
+          screenshots/
+
+    - name: Process test results
+      if: always()
+      id: test-results
+      run: |
+        if [ -f "test-results/report.json" ]; then
+          echo "results_found=true" >> $GITHUB_OUTPUT
+          
+          # Extract test statistics
+          total=$(jq '.stats.total' test-results/report.json)
+          passed=$(jq '.stats.passed' test-results/report.json)
+          failed=$(jq '.stats.failed' test-results/report.json)
+          
+          echo "total=$total" >> $GITHUB_OUTPUT
+          echo "passed=$passed" >> $GITHUB_OUTPUT
+          echo "failed=$failed" >> $GITHUB_OUTPUT
+        else
+          echo "results_found=false" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Send notification
+      if: failure() && steps.test-results.outputs.results_found == 'true'
+      uses: rtCamp/action-slack-notify@v2
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        SLACK_COLOR: ${{ job.status }}
+        SLACK_MESSAGE: |
+          *Playwright Test Results*
+          • Total Tests: ${{ steps.test-results.outputs.total }}
+          • Passed: ${{ steps.test-results.outputs.passed }}
+          • Failed: ${{ steps.test-results.outputs.failed }}
+          
+          View detailed results in the GitHub Actions run:
+          ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        SLACK_TITLE: 'Test Results - ${{ github.workflow }}'
+        SLACK_USERNAME: 'Playwright Tests'
+        SLACK_ICON: ':test_tube:'
