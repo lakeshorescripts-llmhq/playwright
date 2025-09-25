@@ -1,0 +1,1034 @@
+{
+  "cookies": [
+    {
+      "name": "JSESSIONID",
+      "value": "RskF99-kfHRZhKrZ_B_9cH_uqfKoQKGaBjsW_CYa.hqt-api-java",
+      "domain": "wwwtest.lakeshorelearning.com",
+      "path": "/api/v1.46.0-SNAPSHOT",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "chs",
+      "value": "[{\"ch\":\"278\",\"t\":\"2025-09-25 17:43:16\"},{\"ch\":\"4\",\"t\":\"2025-08-26 17:44:16\"}]",
+      "domain": "aorta.clickagy.com",
+      "path": "/channel-sync",
+      "expires": 1793382195.150525,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "bounceClientVisit8272c",
+      "value": "%7B%22vid%22%3A1758822195416919%2C%22did%22%3A%227493635602537741168%22%7D",
+      "domain": ".bounceexchange.com",
+      "path": "/state",
+      "expires": 1758823995.511039,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "akacd_llm_canary",
+      "value": "2147483647~rv=72~id=1fde837f8f38c30f1238dd2644bcd63d",
+      "domain": "wwwtest.lakeshorelearning.com",
+      "path": "/",
+      "expires": 1793382192.265047,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_abck",
+      "value": "27D74AAD10C55DC23A03C7A034385212~-1~YAAQBzIyFy+41kaZAQAAUdn4gQ53PZVqTzL8HnneE1KQT1FTbb4OhFzKSiq76667DHIwDD6B7s7d+sgPzaKdkCTAWqBu5XSWlI5xeCIURU6kfz2FktBAKnHodDcEI4bCCIWpOyMON4tzwwkl7BIgFxIpHoB1rviZJmtEzcVdQBeoVujkim4ssd3hTESpzlSSH8qijig72LeXjEMyG+4BdA3mVk10HiJ9E1P+6gTf/VJmmTye3KdBf3GIMUpYVtGftYMJo6EAfcpWPNYkSt/U/1TiIVCE0Ny92RNUFdEelQi8KtgWa6QMjkVSea8qnQsccglC+K9wYTYGrDqF98fOFMbz7LuO4ZTyzQVhnvaxN7mtMnm1Y41AsXJnnefXX9uYWsd5lj1vnot9/eqZZpIR5M+J96HcBZabfZjXzgcatqP2o0HKo4+znsUkimXfoFFou3ikr2J/yI7JtaC22F2wr16DwA==~-1~-1~-1~-1~-1",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1790358192.265146,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "ak_bmsc",
+      "value": "3AFE65F74C24BA045FEF8BBC88671789~000000000000000000000000000000~YAAQBzIyFzC41kaZAQAAUdn4gR1y2qUdRRf+Sa2ZIhl4XZ2wbD6EO+ka0uHN01nqYtPHm8Q2HAzHRTuCu9z+6nFBYYWy7m1E+AL/NrwQInrkz6oN3UCMCCzpd3N2oA4K180PDVZ5wqqQYOB4dJ75U8qYea16aT86D6r0t3ISAgtQ9KyBfZHJKr0EIzvgVF3LwUTTXkns1/rnocbsvZaQ5gXOPXpSZujSzS4Vrnaw2rHCn06Bo72XDJ8RCL8ywn3Om5MYPjNtcVvpuQGC3uMyoY/fPHPvABe+oJzpo9d7xRu70WLOfiiYaCI5sT87popFjYgSbzo2HOxYLOzoNUnxqxz1rjU51p9bwqrQmQ0fAI6oZOVFdHl3ipJQYmYPC8tPfpqWYveG+cY9QcdZXRVxlUne8GZJOuX4",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1758829392.265172,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_dyjsession",
+      "value": "6ymgfhb6oyh7um884ps5j143x7seu079",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1758824005.000228,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "dy_fs_page",
+      "value": "wwwtest.lakeshorelearning.com",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "JSESSIONID",
+      "value": "RskF99-kfHRZhKrZ_B_9cH_uqfKoQKGaBjsW_CYa.store01",
+      "domain": "wwwtest.lakeshorelearning.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "selectedStore_ll",
+      "value": "071",
+      "domain": "wwwtest.lakeshorelearning.com",
+      "path": "/",
+      "expires": 1790358205.306481,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "BIGipServer~oc-uat~oc-uat-green-https-pool",
+      "value": "!0Npv4P/qToEWvAHTW9fW0zx9hKkvirQ4KdbjpMRfPTxLavmPb1M9MltwyERTrSjEIIjSWpgkW/Ot/CI=",
+      "domain": "wwwtest.lakeshorelearning.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "profileId",
+      "value": "2435602355",
+      "domain": "wwwtest.lakeshorelearning.com",
+      "path": "/",
+      "expires": 1758908592.633499,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "demdex",
+      "value": "33710231155645022212286303274998984417",
+      "domain": ".demdex.net",
+      "path": "/",
+      "expires": 1774374195.441007,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "AMCVS_B0CF5B5B54F627FE0A4C98A2%40AdobeOrg",
+      "value": "1",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_dyid",
+      "value": "-689050496415727823",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1761414192,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "everest_g_v2",
+      "value": "g_surferid~aNV-MgAAAErB8gOF",
+      "domain": ".everesttech.net",
+      "path": "/",
+      "expires": 1790358192.830098,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "s_ecid",
+      "value": "MCMID%7C33700040271159349952285149995832948543",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1793382205.636563,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "dpm",
+      "value": "33710231155645022212286303274998984417",
+      "domain": ".dpm.demdex.net",
+      "path": "/",
+      "expires": 1774374195.441055,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "AMCV_B0CF5B5B54F627FE0A4C98A2%40AdobeOrg",
+      "value": "179643557%7CMCIDTS%7C20357%7CMCMID%7C33700040271159349952285149995832948543%7CMCAAMLH-1759426992%7C9%7CMCAAMB-1759426992%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1758829392s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20364%7CvVersion%7C5.5.0",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1793382192.871159,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "s_vnum",
+      "value": "1759302000989%26vn%3D1",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1759302000,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "s_invisit",
+      "value": "true",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1758824005,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "s_lv_s",
+      "value": "First%20Visit",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1758824005,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "s_cc",
+      "value": "true",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "sv_sid",
+      "value": "f4CJQnNY_zvDqLWO9MAmrhg3H",
+      "domain": ".securedvisit.com",
+      "path": "/",
+      "expires": 1790358205.608451,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "zync-uuid",
+      "value": "310d35c5-f8c3-44b2-84c1-35665b97f778:1758822195.2392893",
+      "domain": ".rezync.com",
+      "path": "/",
+      "expires": 1792518205.631692,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "uuid",
+      "value": "7263716e-2162-44e9-b472-ff765bdec3fd",
+      "domain": ".alocdn.com",
+      "path": "/",
+      "expires": 1790358205.627359,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ttp",
+      "value": "33CXnZuqVZE1V9XREoU96zDjswO",
+      "domain": ".tiktok.com",
+      "path": "/",
+      "expires": 1792518194.075028,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_svsid",
+      "value": "fc4a464b5cf433e344395b798defd735",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1790358205,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "visitorId",
+      "value": "0772e54303985af114b7d96c95e1eb91222dc8bfcf6cba83db2755d5c4d788c2",
+      "domain": ".ws.zoominfo.com",
+      "path": "/",
+      "expires": 1790358194.141978,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_cfuvid",
+      "value": ".Ex84qjr3_1jMZDFn8Vkpehf4cGi70QRxnE0Lrj8240-1758822195365-0.0.1.1-604800000",
+      "domain": ".zoominfo.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_gcl_au",
+      "value": "1.1.442206164.1758822194",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1766598194,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_uetsid",
+      "value": "1ca6fde09a3711f08258c59a3991d92b",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1758908594,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_uetvid",
+      "value": "1ca710c09a3711f0a0788b4f16a10c4c",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1792518194,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "MUID",
+      "value": "317F502390F96F9D0B55465191176E09",
+      "domain": ".bing.com",
+      "path": "/",
+      "expires": 1792518194.352366,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "MR",
+      "value": "0",
+      "domain": ".bat.bing.com",
+      "path": "/",
+      "expires": 1759426994.352416,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "sessionid",
+      "value": "h-b46d89d60ca04207886937baadd08251_t-1758822195",
+      "domain": ".rkdms.com",
+      "path": "/",
+      "expires": 1790358194.415258,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_tt_enable_cookie",
+      "value": "1",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1792518194,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ttp",
+      "value": "01K60ZHQ89G98MYZK6CWHSWWPJ_.tt.1",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1792518194,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga",
+      "value": "GA1.1.2032752683.1758822195",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1793382194.726147,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "igodigitaltc2",
+      "value": "1d89214c-9a37-11f0-9da8-9ac64243f55a",
+      "domain": ".igodigital.com",
+      "path": "/",
+      "expires": 1793382194.626183,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://lakeshorelearning.com",
+      "_crHasCrossSiteAncestor": true
+    },
+    {
+      "name": "igodigitalst_110006712",
+      "value": "1d8929d0-9a37-11f0-9da8-9ac64243f55a",
+      "domain": ".igodigital.com",
+      "path": "/",
+      "expires": 1758825794.626254,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://lakeshorelearning.com",
+      "_crHasCrossSiteAncestor": true
+    },
+    {
+      "name": "igodigitalstdomain",
+      "value": "2000014143",
+      "domain": ".igodigital.com",
+      "path": "/",
+      "expires": 1758825794.626284,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://lakeshorelearning.com",
+      "_crHasCrossSiteAncestor": true
+    },
+    {
+      "name": "TDID",
+      "value": "adc3d850-e5fe-48c0-bb4a-948c71a19f08",
+      "domain": ".adsrvr.org",
+      "path": "/",
+      "expires": 1790358194.868592,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "XANDR_PANID",
+      "value": "P_tt0cIpnaDvOVC7KUd4v77cq620Ecl6pzuAx2YcLoxq1ZIMYljLl_swg6snJeKY1OendnJjlDhA53JF_4efhVT4VFTZ1kGQJT0oODdrUuY.",
+      "domain": ".adnxs.com",
+      "path": "/",
+      "expires": 1766598194.830922,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://lakeshorelearning.com",
+      "_crHasCrossSiteAncestor": true
+    },
+    {
+      "name": "uuid2",
+      "value": "2108650857649482592",
+      "domain": ".adnxs.com",
+      "path": "/",
+      "expires": 1766598194.830977,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "audit_p",
+      "value": "1|jHMPYSbTzlWZm+dVSUz/hWN4bs7mbnObFkvDB5tJ8a0dxN0Yq8pULGM8c5saEBiI4RreiLR2y0iM1KxoLazIt9i2Wk5FrGos0XY24Ec+XLsDcMWGWswFncLAHYvNoUW4iQ8TammbuEB8wyd9dGO9ianGL1GSHbLf5jPYX1GOk3NbOz6AjJtUa8ZnH3r7x5VAdeodiyl5GGjkt77VmXBK7kiCfUmSYXqD+ohH/uuQN8oOr/S07bYDcYQkZmofZQkSVSwKu1RXSJT0/fhu8/pkBO4VeIulq+4M1TRwmTZWV3Xc6UO785F0Pw==",
+      "domain": ".rubiconproject.com",
+      "path": "/",
+      "expires": 1790358194.827176,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://lakeshorelearning.com",
+      "_crHasCrossSiteAncestor": true
+    },
+    {
+      "name": "khaos",
+      "value": "MFZPBO0B-25-818D",
+      "domain": ".rubiconproject.com",
+      "path": "/",
+      "expires": 1790358194.827232,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "khaos_p",
+      "value": "MFZPBO0B-25-818D",
+      "domain": ".rubiconproject.com",
+      "path": "/",
+      "expires": 1790358194.827254,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://lakeshorelearning.com",
+      "_crHasCrossSiteAncestor": true
+    },
+    {
+      "name": "audit",
+      "value": "1|jHMPYSbTzlWZm+dVSUz/hWN4bs7mbnObFkvDB5tJ8a0dxN0Yq8pULGM8c5saEBiI4RreiLR2y0iM1KxoLazIt9i2Wk5FrGos0XY24Ec+XLsDcMWGWswFncLAHYvNoUW4iQ8TammbuEB8wyd9dGO9ianGL1GSHbLf5jPYX1GOk3NbOz6AjJtUa8ZnH3r7x5VAdeodiyl5GGjkt77VmXBK7kiCfUmSYXqD+ohH/uuQN8oOr/S07bYDcYQkZmofZQkSVSwKu1RXSJT0/fhu8/pkBO4VeIulq+4M1TRwmTZWV3Xc6UO785F0Pw==",
+      "domain": ".rubiconproject.com",
+      "path": "/",
+      "expires": 1790358194.827277,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "visitor_id726563",
+      "value": "384564911",
+      "domain": ".pardot.com",
+      "path": "/",
+      "expires": 1793382205.645674,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "visitor_id726563-hash",
+      "value": "39dcf2e3ee3f14b0fa605b6223fb7469542e7cdddb8bafcb5c0e8f2d30d3f5c0af0f71a3e282ed774a70a248bb7d26ba4f59159f",
+      "domain": ".pardot.com",
+      "path": "/",
+      "expires": 1793382205.645742,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "OptanonAlertBoxClosed",
+      "value": "2025-09-25T17:43:14.842Z",
+      "domain": "wwwtest.lakeshorelearning.com",
+      "path": "/",
+      "expires": 1790358194,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "TDCPM",
+      "value": "CAESFQoGZ29vZ2xlEgsIqNvxoaGZvj4QBRIWCgdydWJpY29uEgsIgIjyoaGZvj4QBRIXCghhcHBuZXh1cxILCMaIoaOhmb4-EAUYBSACKAYyCwjgq_TOt5m-PhAFQg8iDQgBEgkKBXRpZXIzEAFaB3FiYTU1d3VgAQ..",
+      "domain": ".adsrvr.org",
+      "path": "/",
+      "expires": 1790358194.868708,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_fbp",
+      "value": "fb.1.1758822194901.810149613185279026",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1766598196,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "cb",
+      "value": "aNV_NDr0VVBAJkf1YFvSiPZs",
+      "domain": ".clickagy.com",
+      "path": "/",
+      "expires": 1793382195.916273,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "ab",
+      "value": "0001%3A1Ovi1F1Yzne36xCkgDJN3bxY36eeTEc8",
+      "domain": ".agkn.com",
+      "path": "/",
+      "expires": 1790358195.728023,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "i",
+      "value": "37d2d261-8ef9-4091-8be5-0a17f1207a6c|1758822196",
+      "domain": ".openx.net",
+      "path": "/",
+      "expires": 1790358195.265931,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "visitor_id726563",
+      "value": "384564911",
+      "domain": "wwwtest.lakeshorelearning.com",
+      "path": "/",
+      "expires": 1793382195.23977,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "visitor_id726563-hash",
+      "value": "39dcf2e3ee3f14b0fa605b6223fb7469542e7cdddb8bafcb5c0e8f2d30d3f5c0af0f71a3e282ed774a70a248bb7d26ba4f59159f",
+      "domain": "wwwtest.lakeshorelearning.com",
+      "path": "/",
+      "expires": 1793382195.239868,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "rlas3",
+      "value": "nF9dXKIIIkm+nRcff67zNEaYBUNsCgoyHC/4GH+sSKM=",
+      "domain": ".rlcdn.com",
+      "path": "/",
+      "expires": 1790358195.304905,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "pxrc",
+      "value": "CLT+1cYGEgUI6AcQABIGCP/qARAA",
+      "domain": ".rlcdn.com",
+      "path": "/",
+      "expires": 1764006195.304961,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "ssi",
+      "value": "92d10909-e981-41f4-8251-d6c910e41509#1758822196567",
+      "domain": ".sitescout.com",
+      "path": "/",
+      "expires": 1790358195.834165,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "bounceClientVisit8272v",
+      "value": "N4IgNgDiBcIBYBcEQM4FIDMBBNAmAYnvgO6kICmKCAdGAIYDWlcA9gE7ljl1sB2AlrwDm1AMYsAtkRAAaEGxghZIKnQoxQAE3IA3fqPIB9fpsUB2ACwBODADYMAVlsAGXA4xnLARi+2AHMpCmhAK0ABmdGAo5HKidChgMBFRMSAArigwCGxpqdp6BhogAEZsLMTRoSAAwnBlEuTKOuRsKPwsvIpeFs7UvWYYGFbUvsoQ9Ahh7BKKAOqCmuWZcvn6RggAnhCNsNooDAgsUHKldLymsMrE5MV65MRJkdEAvnK8LIYMgpT8mdDZuTkHAAjrkqIZDkxOrAwh5bOQvORyA5irhitYzHQwg5NLgLH4vM5nPCLMjcLZPJo-GELKIHH4nH5irZilY6D0LO4HA4zF5NGYwpoHM5lBIWMV+FxHik5HooLALGYRg4LMqlV56YFyCwiuI0rxshtFABVADKygAXvx5SArG4MCK5BAWKowIZxNpFHb3I6QKJ+JtFAAZRjkAAEAFEooJ2I1Yh0EN8De6WJ7YAA5LDKDhCdrQmpZoHkXMdQy8OgNRTVSL8KZ8fh0ZR6g1sDZlis7EDGgQUTRh00INSUJssfWGlNprvm+Nj1sT8gYE2mwsgHjceeKZSaCR0DfQPzODByBrZD4enYHo-gNQBtJpwbUMxyMAdXMIO87AC0PiVGFeIBYMIwjWaVojkFAUDCHQEBgZw5AQaEvDMek-FwXAvCsBx4JYKEADVfgDABJC4QCQlC0IwlVfCsDCmgIhBCIAES6ZC-FQ9DMIsajaOeZ4gA",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1758823995,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "visitor_id726563",
+      "value": "384564911",
+      "domain": "go.lakeshorelearning.com",
+      "path": "/",
+      "expires": 1793382195.652261,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "visitor_id726563-hash",
+      "value": "39dcf2e3ee3f14b0fa605b6223fb7469542e7cdddb8bafcb5c0e8f2d30d3f5c0af0f71a3e282ed774a70a248bb7d26ba4f59159f",
+      "domain": "go.lakeshorelearning.com",
+      "path": "/",
+      "expires": 1793382195.652285,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "u",
+      "value": "C|0AAAAAAAAMGg7tAAAAAAD",
+      "domain": ".agkn.com",
+      "path": "/",
+      "expires": 1790358195.728087,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "chs",
+      "value": "[{\"ch\":\"278\",\"t\":\"2025-09-25 17:43:16\"},{\"ch\":\"319\",\"t\":\"2025-09-25 17:43:16\"},{\"ch\":\"8\",\"t\":\"2025-08-26 17:44:16\"},{\"ch\":\"114\",\"t\":\"2025-09-25 17:43:16\"},{\"ch\":\"124\",\"t\":\"2025-09-25 17:43:16\"},{\"ch\":\"128\",\"t\":\"2025-09-25 17:43:16\"},{\"ch\":\"5\",\"t\":\"2025-09-25 17:43:16\"}]",
+      "domain": "aorta.clickagy.com",
+      "path": "/",
+      "expires": 1793382195.752201,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "ttcsid_CN17CQJC77U5R84FBU60",
+      "value": "1758822194445::J7ggscaMgKPREeqgPnXD.1.1758822196729.0",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1792518196,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "ttcsid",
+      "value": "1758822194446::sYIaWDmFpQBMPyqU_4WL.1.1758822196729.0",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1792518196,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "DYN_USER_ID",
+      "value": "2435602361",
+      "domain": "wwwtest.lakeshorelearning.com",
+      "path": "/",
+      "expires": 1790358197.433558,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "DYN_USER_CONFIRM",
+      "value": "fa4afe161fcac1c6e1d877263a994732",
+      "domain": "wwwtest.lakeshorelearning.com",
+      "path": "/",
+      "expires": 1790358197.433625,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "CartItems_ll",
+      "value": "\"\"",
+      "domain": "wwwtest.lakeshorelearning.com",
+      "path": "/",
+      "expires": 1761414204.433652,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_dyid_server",
+      "value": "-689050496415727823",
+      "domain": "wwwtest.lakeshorelearning.com",
+      "path": "/",
+      "expires": 1790358205.306415,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "s_sq",
+      "value": "%5B%5BB%5D%5D",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_1G1JY7J8J6",
+      "value": "GS2.1.s1758822194$o1$g0$t1758822204$j60$l0$h0",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1793382204.512353,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_326KCJ22RE",
+      "value": "GS2.1.s1758822194$o1$g0$t1758822204$j60$l0$h0",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1793382204.521501,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_85ZBNYVLYR",
+      "value": "GS2.1.s1758822194$o1$g0$t1758822204$j60$l0$h0",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1793382204.528867,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "IDE",
+      "value": "AHWqTUnmpVKjLEqO4vMn5MnR9aXoNMkJuc-wCpbBkM5x1huYtiAcdQxQKK4sWbUa",
+      "domain": ".doubleclick.net",
+      "path": "/",
+      "expires": 1793382204.563489,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "bm_sz",
+      "value": "E334FA5DC1DC653592ADDB1FA410722C~YAAQBzIyF2S41kaZAQAAyQn5gR0FIwX5bFKq2vCxtad6VGJ7Hes7ueMcYE/cYO291aBr5B+WYeDzLZgkwXyn976an1AAu/1O0L2vEyQgpenszeQVTmRJ29mNTUMJ3G62yLloCZwLnSwqRZ12EZrX9epqA/b7Pdwc838rD6cHGUBwn9PHtJLqS+5J85UewqQVgg0GFXUfOwDUujR8rMFHYvPoIDFM0+raS449OxqCHchvmW8ngL1FgNsMLps1LN+jXmNVcIajlIJxGyarGLSwiuQjJzSt/8C0Vsy7rOsW6EuNwpxsGqjCokO3Rw3KQ6S/g0/eFU0BgQbfJGOODbFN6yym2EhDBfJO0k9MkHNInxN3xM6jSZ2J6AQHr+FW5f5l7ABgaAIgwNM7/Wxim2EgnXIzmJZY5l/0b8j+2y0uiyLY~3420980~4534322",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1758836592.67357,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "fs_lua",
+      "value": "1.1758822205098",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1758824005,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "fs_uid",
+      "value": "#10S9RQ#958eaf1c-9eb5-4bf6-86a7-c4d7668bef94:d7f9812e-0a6e-44f3-8fb6-63ec1edafe59:1758822192805::3#/1790358198",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1790358198,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "OptanonConsent",
+      "value": "isGpcEnabled=0&datestamp=Thu+Sep+25+2025+10%3A43%3A25+GMT-0700+(Pacific+Daylight+Time)&version=202508.1.0&browserGpcFlag=0&isIABGlobal=false&hosts=&landingPath=NotLandingPage&groups=C0001%3A1%2CC0004%3A1%2CC0003%3A1%2CC0002%3A1&geolocation=US%3BCA&AwaitingReconsent=false",
+      "domain": "wwwtest.lakeshorelearning.com",
+      "path": "/",
+      "expires": 1790358205,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "SessionConfNumber_ll",
+      "value": "6210598621791334928",
+      "domain": "wwwtest.lakeshorelearning.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_dy_soct",
+      "value": "1758822205!2804013.0!",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1790358205,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "gpv_pn",
+      "value": "b2c%20%7C%20my%20account%20%7C%20my%20account",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1758824005,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "s_lv",
+      "value": "1758822205592",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1793382205.592716,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "sd-session-id",
+      "value": "eyJfcGVybWFuZW50Ijp0cnVlLCJzZXNzaW9uX2lkIjoiMzEwZDM1YzUtZjhjMy00NGIyLTg0YzEtMzU2NjViOTdmNzc4OjE3NTg4MjIxOTUuMjM5Mjg5MyJ9.aNV_Pg.SM-rJrsunMOXD3Fza9-6JCDT--8",
+      "domain": "live.rezync.com",
+      "path": "/",
+      "expires": 1792518205.631754,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "bm_sv",
+      "value": "9EEB161ABD40BD1BDEFE0D2209BF4702~YAAQBzIyF2y41kaZAQAAeQ35gR1kY5mATDLy3EUIqjCyP60699IAFbqXF5b+dmYAQ4ALlwCydRHzZIdzHOku6hjU6HlJyJb172knaeV1PksQGeXShbDI9ifOuldRM3C7mTcMmwnKbNi6p2uHGCg+rPqZkcuTiq0tcPhZWGJtIFTHd1WB2+bzPQZL1sN5Exzp/seJft1WVFMarWxnS6zcSCnP7gAyeqF4PTVCbHUuINimwmMWbmcBUCVufI2/D/AuRbn3UFOUURwuPuSQ~1",
+      "domain": ".lakeshorelearning.com",
+      "path": "/",
+      "expires": 1758829392.63831,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "lpv726563",
+      "value": "aHR0cHM6Ly93d3d0ZXN0Lmxha2VzaG9yZWxlYXJuaW5nLmNvbS9teS1hY2NvdW50Lw%3D%3D",
+      "domain": "pi.pardot.com",
+      "path": "/",
+      "expires": 1758824005.645799,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://wwwtest.lakeshorelearning.com",
+      "localStorage": [
+        {
+          "name": "_dyid",
+          "value": "-689050496415727823"
+        },
+        {
+          "name": "requestTimeStatus",
+          "value": "{\"status\":\"unknown\",\"time\":1758822206000}"
+        },
+        {
+          "name": "_uetvid_exp",
+          "value": "Tue, 20 Oct 2026 17:43:14 GMT"
+        },
+        {
+          "name": "_dy_att_exps",
+          "value": "1984038|13986313::0:1758822192943:33838:86347:1:0:0.22999326209537685:0.6204027566127479|29528533:19750480|2|86347:1758822192943##2072882|14195647::0:1758822192942:33838:86347:1:0:0.542035904712975:0.3865553792566061|29764065|2|86347:1758822205389"
+        },
+        {
+          "name": "_dy_tsrc",
+          "value": "Direct"
+        },
+        {
+          "name": "audioeye_reader_settings",
+          "value": "{\"value\":\"{\\\"c_big\\\":0,\\\"rg\\\":0,\\\"memph\\\":0,\\\"contrast_setting\\\":0,\\\"colorshift_setting\\\":0,\\\"text_size_setting\\\":0,\\\"space_setting\\\":0,\\\"font_setting\\\":0,\\\"k\\\":0,\\\"k_disable_default\\\":0,\\\"hlt\\\":0,\\\"disable_animations\\\":0,\\\"display_alt_desc\\\":0}\",\"expiration\":1759398202259}"
+        },
+        {
+          "name": "_dyexps",
+          "value": "1802984|13337658::0:1758822192553:55144:86347:2:3:0:0.0770391570404172|29011990:18633630|0|86347:1758822205383##1984038|13986313::0:1758822192943:33838:86347:1:0:0.22999326209537685:0.6204027566127479|29528533:19750480|1|86347:1758822192943##2072882|14195647::0:1758822192942:33838:86347:1:0:0.542035904712975:0.3865553792566061|29764065:20146685|1|86347:1758822205388"
+        },
+        {
+          "name": "_gcl_ls",
+          "value": "{\"schema\":\"gcl\",\"version\":1,\"gcl_ctr\":{\"value\":{\"value\":2,\"timeouts\":0,\"creationTimeMs\":1758822204495},\"expires\":1766598204495}}"
+        },
+        {
+          "name": "_dyaud_page",
+          "value": "*2025-09-25*0"
+        },
+        {
+          "name": "_uetsid",
+          "value": "1ca6fde09a3711f08258c59a3991d92b"
+        },
+        {
+          "name": "_svsid",
+          "value": "fc4a464b5cf433e344395b798defd735"
+        },
+        {
+          "name": "_dy_soct",
+          "value": "1758822205!2804013.0!"
+        },
+        {
+          "name": "_dycst",
+          "value": "dk.w.c.ws.fst."
+        },
+        {
+          "name": "localTimestamp",
+          "value": "1758822205265"
+        },
+        {
+          "name": "dy_fs_page",
+          "value": "wwwtest.lakeshorelearning.com"
+        },
+        {
+          "name": "_dyaud_nchc",
+          "value": "2356145***2356142@1.2356143@1.2356144@1.2356145@1.2392719@1.2660455@1.2660456@1.2660873@1.2709777@1.2736709@1.2736719@1.2736720@1.2775772@1.2775773@1.2775774@1"
+        },
+        {
+          "name": "_fs_lua",
+          "value": "1.1758822205098"
+        },
+        {
+          "name": "lastExternalReferrerTime",
+          "value": "1758822194257"
+        },
+        {
+          "name": "_dy_csc",
+          "value": "{\"_pv\":4,\"_ses\":1,\"_prev_ses\":\"6ymgfhb6oyh7um884ps5j143x7seu079\",\"firstpv\":{\"ts\":1758822192529,\"ses\":1,\"pv\":1},\"lastevent_signup\":{\"ts\":1758822204533,\"ses\":1,\"pv\":2},\"lastpv\":{\"ts\":1758822204579,\"ses\":1,\"pv\":2}}"
+        },
+        {
+          "name": "authIntegrationInfoUrl",
+          "value": "https://uat-auth.lakeshorelearning.com/auth/realms/uat/protocol/openid-connect/token"
+        },
+        {
+          "name": "_uetsid_exp",
+          "value": "Fri, 26 Sep 2025 17:43:14 GMT"
+        },
+        {
+          "name": "_uetvid",
+          "value": "1ca710c09a3711f0a0788b4f16a10c4c"
+        },
+        {
+          "name": "_dy_device",
+          "value": "{\"brand\":\"Other\",\"type\":\"desktop\",\"os\":\"windows\",\"browser\":\"chrome\"}"
+        },
+        {
+          "name": "lastExternalReferrer",
+          "value": "empty"
+        },
+        {
+          "name": "userActiveConsent",
+          "value": "true"
+        },
+        {
+          "name": "audioeye_at_start_message",
+          "value": "{\"value\":true}"
+        },
+        {
+          "name": "_fs_songs:1",
+          "value": "{\"Bundles\":[[3,{\"type\":\"string\",\"data\":\"{\\\"Seq\\\":3,\\\"When\\\":5355,\\\"Evts\\\":[{\\\"Kind\\\":67,\\\"Args\\\":[],\\\"When\\\":5355},{\\\"Kind\\\":57,\\\"Args\\\":[2,\\\"https://fullstory.lakeshorelearning.com/rec/bundle/v2?OrgId=10S9RQ&UserId=958eaf1c-9eb5-4bf6-86a7-c4d7668bef94&SessionId=d7f9812e-0a6e-44f3-8fb6-63ec1edafe59&PageId=4d164eba-a5e3-4f77-916a-f191a5c51443&Seq=2&ClientTime=1758822200070&CompiledVersion=b5dea7263ec859343044065a83e12c3101fce841&PageStart=1758822194994&PrevBundleTime=1758822198865&LastActivity=3227&ContentEncoding=gzip\\\",8050.39999999851,99.5,\\\"xmlhttprequest\\\",0,0,8050.39999999851,0,0,0,0,0,0,0,8149.89999999851,0,0,0],\\\"When\\\":5368},{\\\"Kind\\\":2,\\\"Args\\\":[4,-1,[420,[433,4]]],\\\"When\\\":5505},{\\\"Kind\\\":78,\\\"Args\\\":[[0,1,2,5505,0]],\\\"When\\\":5505},{\\\"Kind\\\":2,\\\"Args\\\":[87,88,[[544,2],\\\"#main\\\",431,\\\"audioeye-skip-link\\\",[353,2],\\\"Skip To Main Content\\\",356]],\\\"When\\\":5505},{\\\"Kind\\\":78,\\\"Args\\\":[[0,1,2,5505,0]],\\\"When\\\":5505},{\\\"Kind\\\":78,\\\"Args\\\":[[0,1,5,5505,1]],\\\"When\\\":5505},{\\\"Kind\\\":90,\\\"Args\\\":[[1,2318]],\\\"When\\\":5505},{\\\"Kind\\\":60,\\\"Args\\\":[[1,2318],[\\\".audioeye-skip-link { position: absolute; left: -9999px; overflow: hidden; top: auto; width: 1px; height: 1px; display: inline-block !important; z-index: 50000 !important; }\\\",\\\".audioeye-skip-link:focus, .audioeye-skip-link:active { left: 0px; width: auto; height: auto; background: rgb(255, 255, 255); color: rgb(0, 0, 0); font-size: 14px; font-weight: normal; line-height: 1.5; margin-bottom: 8px; padding: 5px; border: 3px solid rgb(0, 0, 0); transition: none; }\\\"],0],\\\"When\\\":5505},{\\\"Kind\\\":63,\\\"Args\\\":[\\\"POST\\\",\\\"https://fullstory.lakeshorelearning.com/rec/bundle/v2?OrgId=10S9RQ&UserId=958eaf1c-9eb5-4bf6-86a7-c4d7668bef94&SessionId=d7f9812e-0a6e-44f3-8fb6-63ec1edafe59&PageId=4d164eba-a5e3-4f77-916a-f191a5c51443&Seq=2&ClientTime=1758822200070&CompiledVersion=b5dea7263ec859343044065a83e12c3101fce841&PageStart=1758822194994&PrevBundleTime=1758822198865&LastActivity=3227&ContentEncoding=gzip\\\",103,200,\\\"content-type: text/plain\\\\r\\\\n\\\",\\\"alt-svc: h3=\\\\\\\":443\\\\\\\"; ma=2592000,h3-29=\\\\\\\":443\\\\\\\"; ma=2592000\\\\r\\\\ncontent-length: 29\\\\r\\\\ncontent-type: application/json; charset=utf-8\\\\r\\\\ndate: Thu, 25 Sep 2025 17:43:21 GMT\\\\r\\\\nvia: 1.1 google\\\\r\\\\n\\\",1758822200070,37296,29,null,null,1,1,1],\\\"When\\\":5505},{\\\"Kind\\\":4,\\\"Args\\\":[124,\\\"aria-level\\\",\\\"1\\\"],\\\"When\\\":5742},{\\\"Kind\\\":4,\\\"Args\\\":[124,\\\"role\\\",\\\"heading\\\"],\\\"When\\\":5742},{\\\"Kind\\\":4,\\\"Args\\\":[1403,\\\"aria-describedby\\\",\\\"audioeye_new_window_message\\\"],\\\"When\\\":5742},{\\\"Kind\\\":4,\\\"Args\\\":[141,\\\"role\\\",\\\"emphasis\\\"],\\\"When\\\":5742},{\\\"Kind\\\":4,\\\"Args\\\":[648,\\\"alt\\\",\\\"\\\"],\\\"When\\\":5742},{\\\"Kind\\\":4,\\\"Args\\\":[648,\\\"role\\\",\\\"presentation\\\"],\\\"When\\\":5742},{\\\"Kind\\\":78,\\\"Args\\\":[[0,1,5,5742,0]],\\\"When\\\":5742},{\\\"Kind\\\":4,\\\"Args\\\":[1506,\\\"aria-labelledby\\\",null],\\\"When\\\":5995},{\\\"Kind\\\":4,\\\"Args\\\":[1640,\\\"aria-describedby\\\",\\\"audioeye_new_window_message\\\"],\\\"When\\\":5995},{\\\"Kind\\\":4,\\\"Args\\\":[2178,\\\"role\\\",\\\"presentation\\\"],\\\"When\\\":5995},{\\\"Kind\\\":78,\\\"Args\\\":[[0,1,5,5995,1]],\\\"When\\\":5995},{\\\"Kind\\\":4,\\\"Args\\\":[1916,\\\"role\\\",\\\"emphasis\\\"],\\\"When\\\":6248},{\\\"Kind\\\":4,\\\"Args\\\":[1894,\\\"aria-level\\\",\\\"5\\\"],\\\"When\\\":6248},{\\\"Kind\\\":4,\\\"Args\\\":[1894,\\\"role\\\",\\\"heading\\\"],\\\"When\\\":6248},{\\\"Kind\\\":4,\\\"Args\\\":[1472,\\\"role\\\",\\\"presentation\\\"],\\\"When\\\":6248},{\\\"Kind\\\":4,\\\"Args\\\":[1634,\\\"aria-describedby\\\",\\\"audioeye_new_window_message\\\"],\\\"When\\\":6248},{\\\"Kind\\\":4,\\\"Args\\\":[1628,\\\"aria-describedby\\\",\\\"audioeye_new_window_message\\\"],\\\"When\\\":6248},{\\\"Kind\\\":78,\\\"Args\\\":[[0,1,5,6248,1]],\\\"When\\\":6248},{\\\"Kind\\\":4,\\\"Args\\\":[513,\\\"alt\\\",\\\"\\\"],\\\"When\\\":6490},{\\\"Kind\\\":4,\\\"Args\\\":[513,\\\"role\\\",\\\"presentation\\\"],\\\"When\\\":6490},{\\\"Kind\\\":4,\\\"Args\\\":[1637,\\\"aria-describedby\\\",\\\"audioeye_new_window_message\\\"],\\\"When\\\":6490},{\\\"Kind\\\":4,\\\"Args\\\":[1631,\\\"aria-describedby\\\",\\\"audioeye_new_window_message\\\"],\\\"When\\\":6490},{\\\"Kind\\\":78,\\\"Args\\\":[[0,1,5,6490,2]],\\\"When\\\":6490},{\\\"Kind\\\":4,\\\"Args\\\":[2184,\\\"role\\\",\\\"presentation\\\"],\\\"When\\\":6742},{\\\"Kind\\\":4,\\\"Args\\\":[1569,\\\"aria-labelledby\\\",null],\\\"When\\\":6742},{\\\"Kind\\\":4,\\\"Args\\\":[1907,\\\"role\\\",\\\"emphasis\\\"],\\\"When\\\":6742},{\\\"Kind\\\":4,\\\"Args\\\":[2191,\\\"role\\\",\\\"presentation\\\"],\\\"When\\\":6742},{\\\"Kind\\\":4,\\\"Args\\\":[631,\\\"alt\\\",\\\"\\\"],\\\"When\\\":6742},{\\\"Kind\\\":4,\\\"Args\\\":[631,\\\"role\\\",\\\"presentation\\\"],\\\"When\\\":6742},{\\\"Kind\\\":4,\\\"Args\\\":[1766,\\\"aria-level\\\",\\\"4\\\"],\\\"When\\\":6742},{\\\"Kind\\\":4,\\\"Args\\\":[1766,\\\"role\\\",\\\"heading\\\"],\\\"When\\\":6742},{\\\"Kind\\\":78,\\\"Args\\\":[[0,1,5,6742,1]],\\\"When\\\":6742},{\\\"Kind\\\":4,\\\"Args\\\":[530,\\\"alt\\\",\\\"\\\"],\\\"When\\\":6996},{\\\"Kind\\\":4,\\\"Args\\\":[530,\\\"role\\\",\\\"presentation\\\"],\\\"When\\\":6996},{\\\"Kind\\\":4,\\\"Args\\\":[2257,\\\"role\\\",\\\"presentation\\\"],\\\"When\\\":6996},{\\\"Kind\\\":4,\\\"Args\\\":[1729,\\\"role\\\",\\\"presentation\\\"],\\\"When\\\":6996},{\\\"Kind\\\":4,\\\"Args\\\":[1489,\\\"role\\\",\\\"presentation\\\"],\\\"When\\\":6996},{\\\"Kind\\\":78,\\\"Args\\\":[[0,1,5,6996,1]],\\\"When\\\":6996},{\\\"Kind\\\":4,\\\"Args\\\":[1412,\\\"aria-describedby\\\",\\\"audioeye_new_window_message\\\"],\\\"When\\\":7253},{\\\"Kind\\\":4,\\\"Args\\\":[1722,\\\"role\\\",\\\"presentation\\\"],\\\"When\\\":7253},{\\\"Kind\\\":4,\\\"Args\\\":[2282,\\\"aria-describedby\\\",null],\\\"When\\\":7253},{\\\"Kind\\\":78,\\\"Args\\\":[[0,1,5,7253,0]],\\\"When\\\":7253},{\\\"Kind\\\":57,\\\"Args\\\":[6,4294705152,113140133,72810777],\\\"When\\\":7253},{\\\"Kind\\\":48,\\\"Args\\\":[\\\"console\\\",\\\"log\\\",\\\"sending report to reporting service\\\",\\\"https://analytics.audioeye.com/v2/report\\\"],\\\"When\\\":7295},{\\\"Kind\\\":67,\\\"Args\\\":[],\\\"When\\\":7449},{\\\"Kind\\\":57,\\\"Args\\\":[2,\\\"https://analytics.audioeye.com/v2/report\\\",10092.5,143.30000000447035,\\\"fetch\\\",0,0,10092.5,0,0,0,0,0,0,0,10235.80000000447,0,0,0],\\\"When\\\":7462},{\\\"Kind\\\":57,\\\"Args\\\":[8,10257.70000000298,0.0000016273118965991018,false],\\\"When\\\":7462},{\\\"Kind\\\":3,\\\"Args\\\":[1815],\\\"When\\\":7487},{\\\"Kind\\\":2,\\\"Args\\\":[87,2320,[[483,2],\\\"ae_enabled_site\\\",[10492,2],[11302,2],[1258,2],[10351,2],[10378,3],[1810,2],651,\\\":data-modulename\\\",\\\"launcher\\\",[353,2],\\\"This website is AudioEye enabled and is being optimized for accessibility. To open the AudioEye Toolbar, press \\\\\\\"shift + =\\\\\\\". Some assistive technologies may require the use of a passthrough function before this keystroke. For more information, activate the button labeled “Explore your accessibility options”.\\\",[569,3]]],\\\"When\\\":7487},{\\\"Kind\\\":78,\\\"Args\\\":[[0,1,2,7487,0]],\\\"When\\\":7487},{\\\"Kind\\\":2,\\\"Args\\\":[1784,1816,[\\\"<ASIDE\\\",422,\\\"ae_launcher\\\",146,\\\"display: none\\\",431,\\\"ae-module aetipsytip ae-active ae-cta-position-preset-right-mid-lower\\\",832,\\\"Accessibility Help Desk\\\",[353,2],\\\"\\\\n  \\\",726,832,\\\"Explore your accessibility options\\\",[353,2],[10357,2],[12971,2],431,\\\"ae-left\\\",[353,2],\\\"\\\\n      \\\",[12543,3],12982,[10547,3],[672,2],10466,[522,2],\\\"ae-right\\\",[12991,3],[601,2],\\\"icomoon-wrapper\\\",[10513,3],[1810,2],354,\\\"\\\\n          \\\",[601,2],\\\"icomoon-cta ae-icon-launcher-universalaccess ae-initial-cta\\\",[10517,3],[601,2],\\\"icomoon-cta path1 a11y-icon-figure-and-border\\\",[10542,2],[601,2],\\\"icomoon-cta path2 a11y-icon-background\\\",146,\\\"color: rgb(87, 87, 87);\\\",[13018,2],[10544,4],354,12993,[12998,4],354,12979,[672,2],415,356]],\\\"When\\\":7487},{\\\"Kind\\\":78,\\\"Args\\\":[[0,1,2,7487,1]],\\\"When\\\":7487},{\\\"Kind\\\":4,\\\"Args\\\":[87,\\\"data-audioeye-launcher\\\",\\\"\\\"],\\\"When\\\":7487},{\\\"Kind\\\":78,\\\"Args\\\":[[0,1,5,7487,2]],\\\"When\\\":7487},{\\\"Kind\\\":63,\\\"Args\\\":[\\\"POST\\\",\\\"https://analytics.audioeye.com/v2/report\\\",144,200,\\\"content-type: application/json\\\\r\\\\n\\\",\\\"content-length: 0\\\\r\\\\ndate: Thu, 25 Sep 2025 17:43:23 GMT\\\\r\\\\n\\\",1758822202114,16396,0,null,null,1,0,1],\\\"When\\\":7487},{\\\"Kind\\\":57,\\\"Args\\\":[6,4294705152,113667721,48783517],\\\"When\\\":7487},{\\\"Kind\\\":67,\\\"Args\\\":[],\\\"When\\\":7515},{\\\"Kind\\\":57,\\\"Args\\\":[2,\\\"https://fs-obfuscated.invalid?hash=035d7e03&algorithm=fnv32\\\",10254.39999999851,50.5,\\\"css\\\",0,0,10254.39999999851,0,0,0,0,0,0,0,10304.89999999851,0,0,0],\\\"When\\\":7555},{\\\"Kind\\\":57,\\\"Args\\\":[14,\\\"long-animation-frame\\\",10352,50.70000000298023,10402.5,10402.70000000298,0,0],\\\"When\\\":7626},{\\\"Kind\\\":67,\\\"Args\\\":[],\\\"When\\\":9618},{\\\"Kind\\\":109,\\\"Args\\\":[1735,\\\"checked\\\",false],\\\"When\\\":9628},{\\\"Kind\\\":48,\\\"Args\\\":[\\\"console\\\",\\\"log\\\",\\\"API call detected via fetch. Resetting idle timer.\\\"],\\\"When\\\":9632},{\\\"Kind\\\":48,\\\"Args\\\":[\\\"console\\\",\\\"log\\\",\\\"Event Data:\\\",\\\"{\\\\\\\"event\\\\\\\":\\\\\\\"createAccount\\\\\\\",\\\\\\\"detail\\\\\\\":{\\\\\\\"fromPage\\\\\\\":\\\\\\\"global\\\\\\\",\\\\\\\"staySignedIn\\\\\\\":false,\\\\\\\"email\\\\\\\":\\\\\\\"<email>\\\\\\\",\\\\\\\"userShopFor\\\\\\\":\\\\\\\"classroom\\\\\\\",\\\\\\\"isLowerEnvironment\\\\\\\":true,\\\\\\\"md5Email\\\\\\\":\\\\\\\"29a2a771f6333dca6f2a7c117f34b82e\\\\\\\",\\\\\\\"isFurniture\\\\\\\":false,\\\\\\\"llmAPIVersion\\\\\\\":\\\\\\\"/api/v1.46.0-SNAPSHOT\\\\\\\",\\\\\\\"encryptedOrderId\\\\\\\":null,\\\\\\\"orderId\\\\\\\":null}}\\\"],\\\"When\\\":9633},{\\\"Kind\\\":48,\\\"Args\\\":[\\\"console\\\",\\\"log\\\",\\\"API call detected via fetch. Resetting idle timer.\\\"],\\\"When\\\":9634},{\\\"Kind\\\":24,\\\"Args\\\":[2304,true],\\\"When\\\":9640},{\\\"Kind\\\":57,\\\"Args\\\":[2,\\\"https://wwwtest.lakeshorelearning.com/rest/model/atg/userprofiling/ProfileActor/createB2C\\\",4716.39999999851,7696.30000000447,\\\"fetch\\\",0,0,4716.39999999851,0,0,0,0,0,0,0,12412.70000000298,0,0,0],\\\"When\\\":9648},{\\\"Kind\\\":57,\\\"Args\\\":[8,12440.60000000149,0.00006251041308666979,false],\\\"When\\\":9648},{\\\"Kind\\\":67,\\\"Args\\\":[],\\\"When\\\":9656},{\\\"Kind\\\":67,\\\"Args\\\":[],\\\"When\\\":9658},{\\\"Kind\\\":67,\\\"Args\\\":[],\\\"When\\\":9682},{\\\"Kind\\\":48,\\\"Args\\\":[\\\"console\\\",\\\"log\\\",\\\"no sfid found using email...\\\"],\\\"When\\\":9713},{\\\"Kind\\\":48,\\\"Args\\\":[\\\"console\\\",\\\"log\\\",\\\"Cannot read properties of undefined (reading 'ajax')\\\"],\\\"When\\\":9714},{\\\"Kind\\\":67,\\\"Args\\\":[],\\\"When\\\":9732},{\\\"Kind\\\":67,\\\"Args\\\":[],\\\"When\\\":9736},{\\\"Kind\\\":3,\\\"Args\\\":[245,2102,2118,2120,312,317,333,335,1444,2122],\\\"When\\\":9740},{\\\"Kind\\\":2,\\\"Args\\\":[244,246,[[544,2],\\\"https://wwwtest.lakeshorelearning.com/my-account/\\\",431,[1337,2],[1339,2],6]],\\\"When\\\":9740},{\\\"Kind\\\":78,\\\"Args\\\":[[0,1,2,9740,0]],\\\"When\\\":9740},{\\\"Kind\\\":2,\\\"Args\\\":[249,-1,[[522,2],\\\"login-flyout_popOverContent-menus__8IQEY\\\",504,\\\"loginModal\\\",[819,3],\\\"login-flyout_welcome-text__dSqY7 fw-bold mb-3\\\",[8569,4],\\\"Welcome\\\",354,\\\", \\\",354,\\\"new\\\",354,\\\"!\\\",[12059,3],[8984,4],\\\"https://wwwtest.lakeshorelearning.com/order-history\\\",[353,2],\\\"Orders\\\",[8879,6],\\\"https://wwwtest.lakeshorelearning.com/my-profile\\\",[353,2],\\\"Profile\\\",[8879,6],\\\"https://wwwtest.lakeshorelearning.com/address-book-page\\\",[353,2],\\\"Address Book\\\",[8879,6],\\\"https://wwwtest.lakeshorelearning.com/payment-methods\\\",[353,2],\\\"Wallet\\\",[8879,6],\\\"https://wwwtest.lakeshorelearning.com/my-shoppinglist-page\\\",[353,2],[913,2],[1858,4],26,\\\"https://wwwtest.lakeshorelearning.com/lists-and-registries/registry-list\\\",[353,2],[888,2],[13135,5],\\\"https://wwwtest.lakeshorelearning.com/help/preference-center?current-user=true\\\",[353,2],\\\" Preferences\\\",[1168,5],\\\"login-flyout_user-reward-section__MwNG7\\\",[1369,4],[8334,5],[1814,3],[1817,3],[11888,3],[1823,3],[1392,2],[9479,3],[601,2],\\\"login-flyout_rewards-points__t4kka ll-fs-10 mb-2 fw-bold text-dark\\\",[353,2],616,[10265,3],\\\"Points\\\",[622,3],\\\"ll-fs-10 login-flyout_reward-messages__c1bBW\\\",[353,2],\\\"VIP members enjoy $6.99 flat rate shipping!\\\",[1870,3],431,\\\"light ll-fs-14 d-inline-block login-flyout_sign-out-button__uniWq\\\",[9908,3],\\\"sign-out-button\\\",[353,2],\\\"Sign Out\\\",356,[10771,2],26,\\\"https://wwwtest.lakeshorelearning.com/my-account\\\",431,\\\"button_btn__0_zYe button_primary__WYp3T button_btn-full__zBeVY ll-fs-14 mt-2\\\",[353,2],\\\"Account Home\\\",[561,2]]],\\\"When\\\":9740},{\\\"Kind\\\":78,\\\"Args\\\":[[0,1,2,9740,3]],\\\"When\\\":9740},{\\\"Kind\\\":2,\\\"Args\\\":[311,313,[[13054,3],[13057,2],[1772,3],6]],\\\"When\\\":9740},{\\\"Kind\\\":78,\\\"Args\\\":[[0,1,2,9740,0]],\\\"When\\\":9740},{\\\"Kind\\\":2,\\\"Args\\\":[316,-1,[[13063,3],[13066,2],[13068,4],[13072,5],[13077,2],[13079,2],[13081,2],[13083,4],[609,3],[13090,2],354,[13093,2],[13135,5],[13100,2],354,[13103,2],[13135,5],[13110,2],354,[13113,2],[13135,5],[13120,2],354,[13123,2],[13135,5],[13130,2],354,[13133,3],[8984,4],[13140,2],354,[13143,3],[8984,4],[13150,2],354,[13153,2],[697,4],[13159,2],[1427,3],[13164,6],[11883,4],[1819,3],[11890,4],[13181,3],[1598,4],[13188,2],354,[13191,2],[674,2],[13195,2],[522,2],[13199,2],354,[13202,2],[10786,3],[13207,2],616,182,[13211,2],354,[13214,2],[13216,3],[13219,2],[13221,2],354,[13224,2],356]],\\\"When\\\":9740},{\\\"Kind\\\":78,\\\"Args\\\":[[0,1,2,9740,3]],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[231,\\\"name\\\",\\\"search\\\"],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[247,\\\"href\\\",\\\"https://wwwtest.lakeshorelearning.com/my-account/\\\"],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[2167,\\\"for\\\",\\\"1-first-name-account-de5bc872-a9de-4315-8435-79a99592b96c\\\"],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[2170,\\\"id\\\",\\\"1-first-name-account-de5bc872-a9de-4315-8435-79a99592b96c\\\"],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[2170,\\\"name\\\",null],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[2174,\\\"for\\\",\\\"2-last-name-account-4a7762fa-5821-4a2f-8c8f-8b3f539d2544\\\"],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[2177,\\\"id\\\",\\\"2-last-name-account-4a7762fa-5821-4a2f-8c8f-8b3f539d2544\\\"],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[2177,\\\"name\\\",null],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[2180,\\\"for\\\",\\\"3-email-6973cf25-8a0c-4db1-92fa-99bbedcb9ad4\\\"],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[2183,\\\"id\\\",\\\"3-email-6973cf25-8a0c-4db1-92fa-99bbedcb9ad4\\\"],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[2183,\\\"name\\\",null],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[2187,\\\"for\\\",\\\"3-inputPassword-dd343805-dc38-47ab-80b6-ff20cad8f728\\\"],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[2190,\\\"id\\\",\\\"3-inputPassword-dd343805-dc38-47ab-80b6-ff20cad8f728\\\"],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[2190,\\\"name\\\",null],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[2244,\\\"for\\\",\\\"4-phone-number-account-668d727b-ff89-46a1-8742-bf16aab527eb\\\"],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[2249,\\\"id\\\",\\\"4-phone-number-account-668d727b-ff89-46a1-8742-bf16aab527eb\\\"],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[2249,\\\"name\\\",null],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[2253,\\\"for\\\",\\\"5-postal-code-account-87ad73b1-379b-482b-ba01-6a4d925163a1\\\"],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[2256,\\\"id\\\",\\\"5-postal-code-account-87ad73b1-379b-482b-ba01-6a4d925163a1\\\"],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[2256,\\\"name\\\",null],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[2264,\\\"name\\\",\\\"user-shop-for\\\"],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[2270,\\\"name\\\",\\\"user-shop-for\\\"],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[2276,\\\"name\\\",\\\"user-shop-for\\\"],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[2282,\\\"name\\\",\\\"checkbox\\\"],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[2294,\\\"name\\\",\\\"checkbox\\\"],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[314,\\\"href\\\",\\\"https://wwwtest.lakeshorelearning.com/my-account/\\\"],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[1721,\\\"name\\\",null],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[1728,\\\"name\\\",null],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[1735,\\\"name\\\",\\\"checkbox\\\"],\\\"When\\\":9740},{\\\"Kind\\\":4,\\\"Args\\\":[1774,\\\"class\\\",\\\"modal fade\\\"],\\\"When\\\":9740},{\\\"Kind\\\":6,\\\"Args\\\":[248,\\\"new\\\"],\\\"When\\\":9740},{\\\"Kind\\\":6,\\\"Args\\\":[315,\\\"new\\\"],\\\"When\\\":9740},{\\\"Kind\\\":78,\\\"Args\\\":[[0,1,5,9740,15]],\\\"When\\\":9740},{\\\"Kind\\\":63,\\\"Args\\\":[\\\"POST\\\",\\\"https://wwwtest.lakeshorelearning.com/rest/model/atg/userprofiling/ProfileActor/createB2C\\\",7698,200,\\\"is-furniture\\\\r\\\\naccept: application/json\\\\r\\\\nisreact\\\\r\\\\ncontent-type: application/json\\\\r\\\\n\\\",\\\"access-control-allow-methods: GET, POST, PUT, DELETE\\\\r\\\\ncache-control: max-age=0, no-cache, no-store\\\\r\\\\ncontent-encoding: gzip\\\\r\\\\ncontent-length: 10806\\\\r\\\\ncontent-security-policy\\\\r\\\\ncontent-type: application/json;charset=UTF-8\\\\r\\\\ndate: Thu, 25 Sep 2025 17:43:25 GMT\\\\r\\\\nexpires: Thu, 25 Sep 2025 17:43:25 GMT\\\\r\\\\npermissions-policy\\\\r\\\\npragma: no-cache\\\\r\\\\nserver: Apache/2.4.37 (Red Hat)\\\\r\\\\nserver-timing\\\\r\\\\nstrict-transport-security: max-age=600 ; includeSubDomains ; preload\\\\r\\\\nvary: Accept-Encoding\\\\r\\\\nx-akamai-staging\\\\r\\\\nx-content-type-options\\\\r\\\\nx-frame-options: SAMEORIGIN\\\\r\\\\nx-llm-cluster\\\\r\\\\nx-llm-routing\\\\r\\\\nx-powered-by\\\\r\\\\nx-xss-protection\\\\r\\\\n\\\",1758822196737,292,19395,null,null,1,1,1],\\\"When\\\":9740},{\\\"Kind\\\":63,\\\"Args\\\":[\\\"POST\\\",\\\"https://analytics.google.com/g/collect?v=2&tid=G-1G1JY7J8J6&gtm=45je59n2h1v9138577161za200zb874960744zd874960744&_p=1758822193947&_gaz=1&gcs=G111&gcd=13n3n3n3n5l1&npa=0&dma=0&gdid=dYWJhMj&cid=2032752683.1758822195&ul=en-us&sr=1920x1080&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B24.0.0.0%7CChromium%3B140.0.7339.16&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=2&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480710&uid=29a2a771f6333dca6f2a7c117f34b82e&sid=1758822194&sct=1&seg=0&dl=https%3A%2F%2Fwwwtest.lakeshorelearning.com%2F&dt=Lakeshore%C2%AE%20%7C%20Teacher%20Supply%20Store%20%7C%20Top-Quality%20Learning%20Products&en=sign_up&_ee=1&_et=9991&tfd=12493\\\",35,204,\\\"\\\",\\\"access-control-allow-origin: *\\\\r\\\\nalt-svc: h3=\\\\\\\":443\\\\\\\"; ma=2592000,h3-29=\\\\\\\":443\\\\\\\"; ma=2592000\\\\r\\\\ncache-control: no-cache, no-store, must-revalidate\\\\r\\\\ncontent-length: 0\\\\r\\\\ncontent-security-policy-report-only\\\\r\\\\ncontent-type: text/plain\\\\r\\\\ncross-origin-opener-policy-report-only\\\\r\\\\ncross-origin-resource-policy\\\\r\\\\ndate: Thu, 25 Sep 2025 17:43:25 GMT\\\\r\\\\nexpires: Fri, 01 Jan 1990 00:00:00 GMT\\\\r\\\\npragma: no-cache\\\\r\\\\nreport-to\\\\r\\\\nserver: Golfe2\\\\r\\\\n\\\",1758822204515,0,0,null,null,0,0,1],\\\"When\\\":9740},{\\\"Kind\\\":57,\\\"Args\\\":[6,4294705152,114272216,58857556],\\\"When\\\":9740},{\\\"Kind\\\":67,\\\"Args\\\":[],\\\"When\\\":9758},{\\\"Kind\\\":48,\\\"Args\\\":[\\\"console\\\",\\\"log\\\",\\\"Event API Response:\\\",\\\"{\\\\\\\"status\\\\\\\":\\\\\\\"OK\\\\\\\"}\\\"],\\\"When\\\":9764},{\\\"Kind\\\":67,\\\"Args\\\":[],\\\"When\\\":9765},{\\\"Kind\\\":67,\\\"Args\\\":[],\\\"When\\\":9783},{\\\"Kind\\\":57,\\\"Args\\\":[2,\\\"https://assets.adobedtm.com/7168fddab8b8/2338567e7418/f14679f22a02/RC540dc4965e254086a6bf5feba9df1308-source.min.js\\\",12431.10000000149,21,\\\"script\\\",0,0,12431.10000000149,0,0,0,0,0,0,0,12452.10000000149,0,0,0],\\\"When\\\":9796},{\\\"Kind\\\":57,\\\"Args\\\":[2,\\\"https://assets.adobedtm.com/7168fddab8b8/2338567e7418/f14679f22a02/RC0788ecc04ff24074a723628fc0318d89-source.min.js\\\",12430.89999999851,23.200000002980232,\\\"script\\\",0,0,12430.89999999851,0,0,0,0,0,0,0,12454.10000000149,0,0,0],\\\"When\\\":9796},{\\\"Kind\\\":57,\\\"Args\\\":[2,\\\"https://assets.adobedtm.com/7168fddab8b8/2338567e7418/f14679f22a02/RC31433154e98147e8bfce03b692403cb1-source.min.js\\\",12431.20000000298,24.799999997019768,\\\"script\\\",0,0,12431.20000000298,0,0,0,0,0,0,0,12456,0,0,0],\\\"When\\\":9796},{\\\"Kind\\\":57,\\\"Args\\\":[2,\\\"https://assets.adobedtm.com/7168fddab8b8/2338567e7418/f14679f22a02/RC19808cfe81df4436b8bd80b4e4925c85-source.min.js\\\",12431.39999999851,25.600000001490116,\\\"script\\\",0,0,12431.39999999851,0,0,0,0,0,0,0,12457,0,0,0],\\\"When\\\":9796},{\\\"Kind\\\":57,\\\"Args\\\":[2,\\\"https://fs-obfuscated.invalid?url-id=388\\\",12435.5,39.600000001490116,\\\"img\\\",0,0,12435.5,0,0,0,0,0,0,0,12475.10000000149,0,0,0],\\\"When\\\":9796},{\\\"Kind\\\":57,\\\"Args\\\":[2,\\\"https://fs-obfuscated.invalid?url-id=41\\\",12442,35.100000001490116,\\\"img\\\",0,0,12442,0,0,0,0,0,0,0,12477.10000000149,0,0,0],\\\"When\\\":9796},{\\\"Kind\\\":57,\\\"Args\\\":[12,\\\"pointerover\\\",12440.39999999851,48,12440.70000000298,12440.80000000447,0,1774],\\\"When\\\":9796},{\\\"Kind\\\":57,\\\"Args\\\":[12,\\\"pointerenter\\\",12440.39999999851,48,12440.80000000447,12440.80000000447,0,1],\\\"When\\\":9796},{\\\"Kind\\\":57,\\\"Args\\\":[12,\\\"pointerenter\\\",12440.39999999851,48,12440.80000000447,12440.80000000447,0,3],\\\"When\\\":9796},{\\\"Kind\\\":57,\\\"Args\\\":[12,\\\"pointerenter\\\",12440.39999999851,48,12440.80000000447,12440.80000000447,0,87],\\\"When\\\":9796},{\\\"Kind\\\":57,\\\"Args\\\":[12,\\\"pointerenter\\\",12440.39999999851,48,12440.80000000447,12440.80000000447,0,1774],\\\"When\\\":9796},{\\\"Kind\\\":57,\\\"Args\\\":[12,\\\"mouseover\\\",12440.39999999851,48,12440.80000000447,12440.80000000447,0,1774],\\\"When\\\":9796},{\\\"Kind\\\":57,\\\"Args\\\":[15,\\\"script\\\",12454.80000000447,23,\\\"event-listener\\\",\\\"SCRIPT[src=https://assets.adobedtm.com/7168fddab8b8/2338567e7418/f14679f22a02/RC0788ecc04ff24074a723628fc0318d89-source.min.js].onload\\\",12454.80000000447,\\\"https://assets.adobedtm.com/7168fddab8b8/2338567e7418/launch-76dc5ba2798b-staging.min.js\\\",\\\"\\\",221921,0,0,\\\"self\\\"],\\\"When\\\":9796},{\\\"Kind\\\":57,\\\"Args\\\":[15,\\\"script\\\",12479.80000000447,30,\\\"event-listener\\\",\\\"SCRIPT[src=https://assets.adobedtm.com/7168fddab8b8/2338567e7418/f14679f22a02/RC31433154e98147e8bfce03b692403cb1-source.min.js].onload\\\",12479.80000000447,\\\"https://assets.adobedtm.com/7168fddab8b8/2338567e7418/launch-76dc5ba2798b-staging.min.js\\\",\\\"\\\",221921,0,0,\\\"self\\\"],\\\"When\\\":9796},{\\\"Kind\\\":57,\\\"Args\\\":[14,\\\"long-animation-frame\\\",12444.5,67,12511.30000000447,12511.39999999851,0,0],\\\"When\\\":9796},{\\\"Kind\\\":57,\\\"Args\\\":[2,\\\"https://analytics.google.com/g/collect?v=2&tid=G-1G1JY7J8J6&gtm=45je59n2h1v9138577161za200zb874960744zd874960744&_p=1758822193947&_gaz=1&gcs=G111&gcd=13n3n3n3n5l1&npa=0&dma=0&gdid=dYWJhMj&cid=2032752683.1758822195&ul=en-us&sr=1920x1080&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B24.0.0.0%7CChromium%3B140.0.7339.16&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=2&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480710&uid=29a2a771f6333dca6f2a7c117f34b82e&sid=1758822194&sct=1&seg=0&dl=https%3A%2F%2Fwwwtest.lakeshorelearning.com%2F&dt=Lakeshore%C2%AE%20%7C%20Teacher%20Supply%20Store%20%7C%20Top-Quality%20Learning%20Products&en=sign_up&_ee=1&_et=9991&tfd=12493\\\",12493.70000000298,34.19999999552965,\\\"fetch\\\",0,0,12493.70000000298,0,0,0,0,0,0,0,12527.89999999851,0,0,0],\\\"When\\\":9796},{\\\"Kind\\\":57,\\\"Args\\\":[2,\\\"https://async-px.dynamicyield.com/dpx\\\",12444.10000000149,87.79999999701977,\\\"beacon\\\",0,0,12444.10000000149,0,0,0,0,0,0,0,12531.89999999851,0,0,0],\\\"When\\\":9796},{\\\"Kind\\\":57,\\\"Args\\\":[2,\\\"https://wwwtest.lakeshorelearning.com/api/v1.46.0-SNAPSHOT/ext/logDTMSuccessData\\\",12431.70000000298,107.69999999552965,\\\"fetch\\\",0,0,12431.70000000298,0,0,0,0,0,0,0,12539.39999999851,0,0,0],\\\"When\\\":9796},{\\\"Kind\\\":57,\\\"Args\\\":[2,\\\"https://www.google.com/ccm/form-data/1040021083?gtm=45be59n2h1v874960744za200zd874960744xec&gcs=G111&gcd=13n3n3n3n5l1&dma=0&tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104684208~104684211~104948813~115480709~115616986&userId=29a2a771f6333dca6f2a7c117f34b82e&did=dYWJhMj&gdid=dYWJhMj&npa=0&frm=0&pscdl=noapi&auid=442206164.1758822194&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B24.0.0.0%7CChromium%3B140.0.7339.16&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0\\\",12483.80000000447,63,\\\"beacon\\\",0,0,12483.80000000447,0,0,0,0,0,0,0,12546.80000000447,0,0,0],\\\"When\\\":9797},{\\\"Kind\\\":57,\\\"Args\\\":[2,\\\"https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1040021083/?random=1758822204501&cv=11&fst=1758822204501&bg=ffffff&guid=ON&async=1&en=sign_up&gtm=45be59n2h1v874960744za200zd874960744xec&gcd=13n3n3n3n5l1&dma=0&tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104684208~104684211~104948813~115480709~115616986&u_w=1920&u_h=1080&url=https%3A%2F%2Fwwwtest.lakeshorelearning.com%2F&frm=0&tiba=Lakeshore%C2%AE%20%7C%20Teacher%20Supply%20Store%20%7C%20Top-Quality%20Learning%20Products&userId=29a2a771f6333dca6f2a7c117f34b82e&did=dYWJhMj&gdid=dYWJhMj&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=442206164.1758822194&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B24.0.0.0%7CChromium%3B140.0.7339.16&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&data=event%3Dsign_up&rfmt=3&fmt=4\\\",12485.39999999851,57.5,\\\"script\\\",0,0,12485.39999999851,0,0,0,0,0,0,0,12542.89999999851,0,0,0],\\\"When\\\":9797},{\\\"Kind\\\":57,\\\"Args\\\":[2,\\\"https://www.googleadservices.com/pagead/conversion/1040021083/?random=1758822204477&cv=11&fst=1758822204477&bg=ffffff&guid=ON&async=1&en=conversion&gtm=45be59n2h1v874960744za200zd874960744xec&gcs=G111&gcd=13n3n3n3n5l1&dma=0&tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104684208~104684211~104948813~115480709~115616986&u_w=1920&u_h=1080&url=https%3A%2F%2Fwwwtest.lakeshorelearning.com%2F&label=2JJ_CIC18osYENvs9e8D&gtm_ee=1&frm=0&tiba=Lakeshore%C2%AE%20%7C%20Teacher%20Supply%20Store%20%7C%20Top-Quality%20Learning%20Products&did=dYWJhMj&gdid=dYWJhMj&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=442206164.1758822194&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B24.0.0.0%7CChromium%3B140.0.7339.16&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&capi=1&gcl_ctr=1~0&data=event%3Dconversion&fmt=7\\\",12465.5,92.60000000149012,\\\"fetch\\\",0,0,12465.5,0,0,0,0,0,0,0,12558.10000000149,0,0,0],\\\"When\\\":9797},{\\\"Kind\\\":57,\\\"Args\\\":[2,\\\"https://www.googleadservices.com/pagead/conversion/1040021083/?random=1758822204494&cv=11&fst=1758822204494&bg=ffffff&guid=ON&async=1&en=conversion&gtm=45be59n2h1v874960744za200zd874960744xec&gcs=G111&gcd=13n3n3n3n5l1&dma=0&tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104684208~104684211~104948813~115480709~115616986&u_w=1920&u_h=1080&url=https%3A%2F%2Fwwwtest.lakeshorelearning.com%2F&label=2JJ_CIC18osYENvs9e8D&gtm_ee=1&frm=0&tiba=Lakeshore%C2%AE%20%7C%20Teacher%20Supply%20Store%20%7C%20Top-Quality%20Learning%20Products&did=dYWJhMj&gdid=dYWJhMj&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=442206164.1758822194&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B24.0.0.0%7CChromium%3B140.0.7339.16&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&capi=1&gcl_ctr=2~0&data=event%3Dconversion&fmt=7\\\",12474.20000000298,84,\\\"fetch\\\",0,0,12474.20000000298,0,0,0,0,0,0,0,12558.20000000298,0,0,0],\\\"When\\\":9797},{\\\"Kind\\\":57,\\\"Args\\\":[2,\\\"https://fs-obfuscated.invalid?url-id=398\\\",12555.60000000149,23.600000001490116,\\\"img\\\",0,0,12555.60000000149,0,0,0,0,0,0,0,12579.20000000298,0,0,0],\\\"When\\\":9797},{\\\"Kind\\\":57,\\\"Args\\\":[13,6],\\\"When\\\":9797},{\\\"Kind\\\":67,\\\"Args\\\":[],\\\"When\\\":9820},{\\\"Kind\\\":67,\\\"Args\\\":[],\\\"When\\\":9832},{\\\"Kind\\\":67,\\\"Args\\\":[],\\\"When\\\":9841},{\\\"Kind\\\":67,\\\"Args\\\":[],\\\"When\\\":9852},{\\\"Kind\\\":23,\\\"Args\\\":[7],\\\"When\\\":9864},{\\\"Kind\\\":4,\\\"Args\\\":[1774,\\\"style\\\",\\\"display: none;\\\"],\\\"When\\\":9864},{\\\"Kind\\\":4,\\\"Args\\\":[1774,\\\"aria-hidden\\\",\\\"true\\\"],\\\"When\\\":9864},{\\\"Kind\\\":4,\\\"Args\\\":[1774,\\\"aria-modal\\\",null],\\\"When\\\":9864},{\\\"Kind\\\":4,\\\"Args\\\":[1774,\\\"role\\\",null],\\\"When\\\":9864},{\\\"Kind\\\":4,\\\"Args\\\":[2101,\\\"class\\\",\\\"modal-backdrop fade\\\"],\\\"When\\\":9864},{\\\"Kind\\\":78,\\\"Args\\\":[[0,1,5,9864,1]],\\\"When\\\":9864},{\\\"When\\\":9864,\\\"Kind\\\":78,\\\"Args\\\":[[0,1,3,9864,0,[3,0],[3,0],[3,0],[3,0],[3,0],[3,0],[3,0]]]},{\\\"When\\\":9864,\\\"Kind\\\":99,\\\"Args\\\":[\\\"https://wwwtest.lakeshorelearning.com/\\\",\\\"https://wwwtest.lakeshorelearning.com/\\\",1905,1080,1920,1080,\\\"2.0.0\\\",\\\"\\\",\\\"<!DOCTYPE html>\\\",2797,\\\"958eaf1c-9eb5-4bf6-86a7-c4d7668bef94\\\",1758822194994,\\\"en-US\\\",\\\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.7339.16 Safari/537.36\\\",\\\"c14c39edf58900\\\",false,false,null,\\\"\\\",1758721426,\\\"b5dea7263ec859343044065a83e12c3101fce841\\\",\\\"\\\",\\\"\\\"]}]}\"},24770]],\"IsNewSession\":false,\"LastBundleTime\":1758822204683,\"OrgId\":\"10S9RQ\",\"PageId\":\"4d164eba-a5e3-4f77-916a-f191a5c51443\",\"PageStartTime\":1758822194818,\"RecHost\":\"fullstory.lakeshorelearning.com\",\"ServerBundleTime\":1758822201334,\"ServerPageStart\":1758822194994,\"SessionId\":\"d7f9812e-0a6e-44f3-8fb6-63ec1edafe59\",\"UserId\":\"958eaf1c-9eb5-4bf6-86a7-c4d7668bef94\",\"Version\":\"v2\"}"
+        },
+        {
+          "name": "_fs_uid",
+          "value": "#10S9RQ#958eaf1c-9eb5-4bf6-86a7-c4d7668bef94:d7f9812e-0a6e-44f3-8fb6-63ec1edafe59:1758822192805::3#/1790358198"
+        }
+      ]
+    },
+    {
+      "origin": "https://assets.bounceexchange.com",
+      "localStorage": [
+        {
+          "name": "bounceClientVisit8272",
+          "value": "{\"did\":\"7493635602537741168\",\"vid\":1758822195416919,\"v\":{\"logged_in\":false,\"ever_logged_in\":false,\"cart_qty\":0,\"submitted_onsite\":false,\"cart\":false,\"logged_in_identified\":false},\"fvt\":1758822195,\"ao\":0,\"lp\":\"https%3A%2F%2Fwwwtest.lakeshorelearning.com%2F\",\"as\":0,\"vpv\":1,\"vs\":1,\"r\":\"\",\"cvt\":1758822195,\"sid\":3,\"gcr\":7,\"m\":0,\"lvt\":1758822195,\"d\":\"d\"}"
+        }
+      ]
+    }
+  ]
+}

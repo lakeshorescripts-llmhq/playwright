@@ -1,0 +1,128 @@
+
+{
+	"servers": {
+		"playwright": {
+			"command": "npx",
+			"args": [
+				"@playwright/mcp@latest"
+			]
+		}
+	},
+	
+
+
+
+  "projectName": "Playwright Master Config",
+  "version": "1.0.0",
+
+  "environments": {
+    "dev": {
+      "baseURL": "https://qa.llmhq.com",
+      "authToken": "dev-token-123",
+      "browser": "firefox",
+      "headless": false
+    },
+    "staging": {
+      "baseURL": "https://wwwtest.lakeshorelearning.com",
+      "authToken": "staging-token-456",
+      "browser": "chromium",
+      "headless": true
+    },
+    "prod": {
+      "baseURL": "https://www.lakeshorelearning.com",
+      "authToken": "prod-token-789",
+      "browser": "chromium",
+      "headless": true
+    }
+  },
+
+  "suites": {
+    "smoke": {
+      "tags": ["@smoke"],
+      "retry": 1,
+      "timeout": 30000
+    },
+    "regression": {
+      "tags": ["@regression"],
+      "retry": 2,
+      "timeout": 60000
+    },
+    "critical-path": {
+      "tags": ["@critical"],
+      "retry": 3,
+      "timeout": 90000
+    }
+  },
+
+  "settings": {
+    "trace": "on-first-retry",
+    "screenshot": "only-on-failure",
+    "video": "retain-on-failure",
+    "workers": 4,
+    "reporters": ["html", "json", "junit"],
+    "outputDir": "test-results"
+  },
+
+  "auth": {
+    "reuseSession": true,
+    "loginFixture": "global-login",
+    "tokenStorage": "auth-tokens.json"
+  },
+
+  "fixtures": {
+    "dbReset": true,
+    "mockAPI": "mock-server-config.json",
+    "customHeaders": {
+      "X-Test-Run": "true"
+    }
+  },
+
+  "ci": {
+    "enabled": true,
+    "provider": "GitHub Actions",
+    "shard": "auto",
+    "retries": 2,
+    "env": "staging",
+    "runTags": ["@smoke", "@critical"]
+  },
+
+  "notifications": {
+    "slackWebhook": "https://hooks.slack.com/services/your/webhook/url",
+    "notifyOnFailure": true,
+    "notifyOnSuccess": false
+  },
+
+  "fileSecurity": {
+  "allowedExtensions": [".json", ".csv", ".txt"],
+  "restrictedPaths": [
+    "/etc/",
+    "/usr/local/bin/",
+    "C:\\Windows\\System32\\",
+	"node_modules/",
+	"/test-results/",
+	"/playwright-report/",
+	"/blob-report/",
+	"/playwright/.cache/",
+	".env"
+  ],
+  "maxFileSizeMB": 5,
+  "scanForSecrets": true,
+  "blockExecutableFiles": true,
+  "blockedExtensions": [".exe", ".sh", ".bat", ".cmd", ".msi"],
+  "auditLogging": true,
+  "auditLogPath": "./logs/file-access.log",
+  "quarantineOnViolation": true,
+  "allowedDirectories": ["./data", "./fixtures"],
+  "requireChecksumValidation": true,
+  "encryptionRequired": true
+	},
+
+	"fileAccessRules": {
+  "readOnly": ["./fixtures"],
+  "readWrite": ["./data"],
+  "noAccess": ["./playwright-report", "./blob-report"]
+}
+
+
+
+}
