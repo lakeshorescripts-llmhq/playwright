@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { RegistriesPage } from '../../pages/RegistriesPage';
-import { HomePage } from '../../pages/HomePage'; // Example alternative path if needed
+import { RegistriesPage } from '../pages/RegistriesPage';
+import { HomePage } from '../pages/HomePage'; // Example alternative path if needed
 
 test.describe('Registries Page Regression Tests', () => {
 
