@@ -9,7 +9,7 @@ test.describe('Registries Page Regression Tests', () => {
     let home: HomePage;
     let registriesPage: RegistriesPage;
 
-    test.beforeEach(async ({ pxage }) => {
+    test.beforeEach(async ({ page }) => {
         home = new HomePage(page);
         registriesPage = new RegistriesPage(page);
         await home.closeConsentBanner();
@@ -61,4 +61,11 @@ test.describe('Registries Page Regression Tests', () => {
         // Assuming a "no results" message appears
         await expect(registriesPage.page.locator('text=No registries found')).toBeVisible();
     });
+
+    //test('should be able to edit registry', async () => {
+
+    //test('should be able to add item to registry', async () => {
+
+    //test('should be able to delete registry', async () => {
+
 });
