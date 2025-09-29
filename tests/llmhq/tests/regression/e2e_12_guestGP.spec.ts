@@ -72,7 +72,7 @@ test('Google Pay checkout flow with fallback confirmation page', async ({ page }
     // --- Step 4: Handle login modal or fallback ---
     const signInModalVisible = await page.locator('#sign-in-modal').isVisible();
     if (signInModalVisible || currentUrl.includes('login=true')) {
-      console.log('Sign-in modal detected, mocking confirmation page...');
+      console.log('Sign-in modal detected, mocking confirmation page...lol');
       await page.setContent(`
         <html>
           <head>

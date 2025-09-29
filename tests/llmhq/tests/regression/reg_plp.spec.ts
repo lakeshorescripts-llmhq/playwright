@@ -192,7 +192,7 @@ test.describe('PLP Regression Tests', () => {
       // Select new page size and wait for update
       await itemsPerPageDropdown.selectOption({ label: `${pageSize} Per Page` });
       await navigationPromise;
-      await page.waitForLoadState('networkidle');
+      await page.waitForLoadState('domcontentloaded');
 
       // Scroll to ensure all products load
       await page.evaluate(() => window.scrollTo(0, 0));
