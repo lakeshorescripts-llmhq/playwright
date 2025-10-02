@@ -29,11 +29,13 @@
     "eslint": "^9.35.0",
     "jq": "^1.7.2",
     "rimraf": "^6.0.1",
+    "tigrmail": "^1.0.9",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.44.0"
   },
   "dependencies": {
-    "dotenv": "^17.2.1",
+    "cheerio": "^1.1.2",
+    "dotenv": "^17.2.2",
     "marked": "^16.3.0",
     "playwright-msteams-reporter": "^0.0.12",
     "user-agents": "^1.1.660",

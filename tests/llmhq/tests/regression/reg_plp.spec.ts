@@ -30,37 +30,13 @@ test.describe('PLP Regression Tests', () => {
         await page.waitForLoadState('domcontentloaded');
     });
 
-    /* Product Listing Page Tests Placeholders */
     
-    // test('Category Landing Page Hero - validate hero banner content and links');
-    
-    // test('Category Landing Page Links - validate all subcategory links are displayed correctly');
-    
-    // test('Product Cards - validate all product information is displayed correctly');
-    
-    // test('Product Quick View - validate quick view modal functionality');
-    
-    // test('Add to Cart - validate add to cart from PLP functionality');
-    
-    // test('Price Filters - validate price range filter functionality');
-    
-    // test('Category Filters - validate category filter functionality');
-    
-    // test('Multiple Filters - validate applying multiple filters simultaneously');
-    
-    // test('Clear Filters - validate clearing individual and all filters');
-    
-    // test('Search Within - validate search within category functionality');
-    
-    // test('Out of Stock Products - validate out of stock product display');
-    
-    // test('Product Variants - validate product variant selection on PLP');
-    
-    // test('Product Ratings - validate product ratings and reviews display');
-    
-    // test('Product Compare - validate product comparison functionality');
-    
-    // test('Mobile Layout - validate responsive design for mobile viewport');
+    test('Narrow by Availability', async ({page}) => {
+      await page.goto('/products/classroom-furniture/tables-desks/N/1203103665/');
+      await page.getByRole('listitem').filter({ hasText: 'Store Pickup (' }).locator('#checkbox-').click();
+      await expect(page.getByText('FREE Store Pickup').first()).toBeVisible();
+   });
+
 
   test('Page should load correctly', async ({page}) => {
     await homePage.clickGiftCards();
@@ -195,8 +171,8 @@ test.describe('PLP Regression Tests', () => {
     await homePage.selectCategoryLink(locators.activePlay);
 
     // Wait for initial page load
-    await page.waitForLoadState('domcontentloaded');
-    await page.waitForLoadState('networkidle');
+    // await page.waitForLoadState('domcontentloaded');
+    // await page.waitForLoadState('networkidle');
 
     // Find and verify product cards
     const productSelector = '[class*="product-card"] img[alt]';
@@ -216,7 +192,7 @@ test.describe('PLP Regression Tests', () => {
       // Select new page size and wait for update
       await itemsPerPageDropdown.selectOption({ label: `${pageSize} Per Page` });
       await navigationPromise;
-      await page.waitForLoadState('networkidle');
+      await page.waitForLoadState('domcontentloaded');
 
       // Scroll to ensure all products load
       await page.evaluate(() => window.scrollTo(0, 0));

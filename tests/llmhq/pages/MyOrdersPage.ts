@@ -11,7 +11,7 @@ export class MyOrdersPage {
     await expect(this.page).toHaveURL(/order-details/, {timeout: 10000});
   }
 
-  async verifyBillingInfo(billing: Record<string, string>) {
+  async verifyBillingInfo(billing: Record<string, string>, isStorePickup: boolean = false) {
   console.log(`📦 Verifying billing information for: ${billing.firstName} ${billing.lastName}`);
 
   const checks = [
@@ -27,6 +27,9 @@ export class MyOrdersPage {
   ];
 
   for (const { locator, label } of checks) {
+    if (isStorePickup && ['Address1', 'Address2', 'City', 'State', 'Zip Code', 'Country'].includes(label)) {
+      continue;
+    }
     try {
       if (await locator.isVisible()) {
         await expect(locator).toBeVisible();
