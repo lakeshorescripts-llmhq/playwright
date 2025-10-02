@@ -12,13 +12,14 @@ test('user receives shared product email', async ({ page }) => {
   if (!TIGRMAIL_TOKEN) throw new Error('Missing Tigrmail token');
 
   const tigr = new Tigrmail({ token: TIGRMAIL_TOKEN });
-  const emailAddress = await tigr.createEmailAddress();
+  const emailAddress = 'watching-civet-gzrudi1p2fmayb25z64l@den.tigrmail.com';
+  console.log('Inbox saved to .env:', emailAddress);
 
-  // Save inbox to .env file
-  const envPath = path.resolve(__dirname, '..', '.env');
-  const envContent = fs.readFileSync(envPath, 'utf-8');
-  const updatedEnv = envContent.replace(/TIGRMAIL_INBOX=.*/g, '') + `\nTIGRMAIL_INBOX=${emailAddress}`;
-  fs.writeFileSync(envPath, updatedEnv.trim());
+  // // Save inbox to .env file
+  // const envPath = path.resolve(__dirname, '..', '.env');
+  // const envContent = fs.readFileSync(envPath, 'utf-8');
+  // const updatedEnv = envContent.replace(/TIGRMAIL_INBOX=.*/g, '') + `\nTIGRMAIL_INBOX=${emailAddress}`;
+  // fs.writeFileSync(envPath, updatedEnv.trim());
 
   console.log('Inbox saved to .env:', emailAddress);
 
@@ -27,16 +28,22 @@ test('user receives shared product email', async ({ page }) => {
   await page.getByRole('img', { name: 'Share Via Email' }).click();
 
   await page.getByTestId('input-text').fill('test from');
-  await page.getByTestId('input-email').fill('noreply@yourapp.com');
-  await page.getByTestId('recipient-name').fill('test to');
-  await page.getByTestId('recipient-email').fill(emailAddress);
+  await page.getByTestId('input-email').fill('qa@llmhq.com');
+  await page.getByTestId('input-text2').fill('test to');
+
+  // errors out here due to email field only allowing 40 max characters
+  await page.getByTestId('input-email2').fill(emailAddress);
   await page.getByTestId('submit-button').click();
 
-  const message = await tigr.pollNextMessage({
-    inbox: emailAddress,
-    subject: { contains: 'Shared a Lakeshore Item with You' },
-    timeout: 30000,
-  });
+  const message = await Promise.race([
+    tigr.pollNextMessage({
+      inbox: emailAddress,
+      subject: { contains: 'Shared a Lakeshore Item with You' },
+    }),
+    new Promise((_, reject) =>
+      setTimeout(() => reject(new Error('Timeout exceeded')), 30000)
+    ),
+  ]);
 
   const $ = cheerio.load(message.body.html);
   const productLink = $('a').first().attr('href');

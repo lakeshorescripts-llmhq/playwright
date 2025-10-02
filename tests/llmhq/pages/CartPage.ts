@@ -267,9 +267,19 @@ export class CartPage {
                 console.log('✅ Clicked "Use Password Instead" button.');
             } else {
                 console.log('ℹ️ "Use Password Instead" button is not visible, continuing...');
+                const tryAnotherWay = newPage.getByRole('button', { name: 'Try Another Way' });
+                if (await tryAnotherWay.isVisible()) {
+                    await tryAnotherWay.click();
+                    await newPage.waitForTimeout(3000);
+                    const usePasswordInstead = newPage.getByRole('button', { name: 'Use Password Instead' });
+                    if (await usePasswordInstead.isVisible()) {
+                        await usePasswordInstead.click();
+                        console.log('✅ Clicked "Use Password Instead" button.');
+                    }
+                }
             }
         } catch {
-            console.log('⚠️ "Use Password Instead" button not found, continuing...');
+            console.log('⚠️ "Use Password Instead" or "Try Another Way" button not found, continuing...');
         }
     
         await newPage.getByRole('textbox', { name: 'Password' }).fill(password);

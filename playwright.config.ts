@@ -59,9 +59,8 @@ export default defineConfig({
     },
 
   use: {
-    //baseURL: 'https://qa.llmhq.com/',
-    baseURL: 'https://wwwtest.lakeshorelearning.com',
-    //baseURL: 'https://prodsupport.llmhq.com/',
+    baseURL: process.env.BASE_URL || '',
+  
     
     httpCredentials: {
       username: process.env.PLAYWRIGHT_USERNAME || '',

@@ -61,12 +61,15 @@ test('Google Pay checkout flow with fallback confirmation page', async ({ page }
       if (response.redirectURL) {
         window.location.href = response.redirectURL;
       }
+      
       return response;
+      
     });
 
     await page.waitForNavigation({ waitUntil: 'networkidle' });
 
     const currentUrl = await page.url();
+    
     console.log('Navigated to:', currentUrl);
 
     // --- Step 4: Handle login modal or fallback ---
