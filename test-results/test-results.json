@@ -1,0 +1,229 @@
+{
+  "config": {
+    "configFile": "C:\\Playwright\\playwright.config.ts",
+    "rootDir": "C:/Playwright/tests",
+    "forbidOnly": true,
+    "fullyParallel": true,
+    "globalSetup": "C:\\Playwright\\global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report",
+          "open": "on-failure"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/test-results.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "test-results/junit-results.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Playwright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Chrome Desktop",
+        "name": "Chrome Desktop",
+        "testDir": "C:/Playwright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "3way",
+    "version": "1.55.0",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "llmhq\\tests\\regression\\reg_clearTheList.spec.ts",
+      "file": "llmhq/tests/regression/reg_clearTheList.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "REGRESSION - CLEAR THE LIST FUNCTIONALITY",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Chrome Desktop",
+              "projectName": "Chrome Desktop",
+              "results": [
+                {
+                  "workerIndex": 30,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 31613,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "🍪 Cookie banner detected. Clicking X to close consent banner...\n"
+                    },
+                    {
+                      "text": "✅ Cookie banner dismissed.\n"
+                    },
+                    {
+                      "text": "🛒 Emptying the cart...\n"
+                    },
+                    {
+                      "text": "🛒 Cart is already empty.\n"
+                    },
+                    {
+                      "text": "✅ All shopping lists have been deleted.\n"
+                    },
+                    {
+                      "text": "🌐 Navigating to the Clear the List page...\n"
+                    },
+                    {
+                      "text": "🌐 Navigate to BASEURL\n"
+                    },
+                    {
+                      "text": "🔍 Searching for: TEST050\n"
+                    },
+                    {
+                      "text": "📝 Clicking on \"Add to List\" link...\n"
+                    },
+                    {
+                      "text": "🔍 Navigating to Find a List...\n"
+                    },
+                    {
+                      "text": "📝 Filling out search form...\n"
+                    },
+                    {
+                      "text": "✅ Search submitted.\n"
+                    },
+                    {
+                      "text": "🗑️ Found a list to delete...\n"
+                    },
+                    {
+                      "text": "✅ All shopping lists have been deleted.\n"
+                    },
+                    {
+                      "text": "🚪 Signing out from header...\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to Clear The List page",
+                      "duration": 976
+                    },
+                    {
+                      "title": "Close consent banner",
+                      "duration": 2620
+                    },
+                    {
+                      "title": "Create a list as guest",
+                      "duration": 292
+                    },
+                    {
+                      "title": "Sign in with test credentials",
+                      "duration": 3303
+                    },
+                    {
+                      "title": "Empty cart",
+                      "duration": 3214
+                    },
+                    {
+                      "title": "Delete all existing lists",
+                      "duration": 2544
+                    },
+                    {
+                      "title": "Navigate back to Clear The List landing page",
+                      "duration": 631
+                    },
+                    {
+                      "title": "Start a new list",
+                      "duration": 5600
+                    },
+                    {
+                      "title": "Navigate to homepage and search for SKU",
+                      "duration": 2005
+                    },
+                    {
+                      "title": "Add product to Clear The List",
+                      "duration": 2723
+                    },
+                    {
+                      "title": "Navigate to Clear The List page again",
+                      "duration": 645
+                    },
+                    {
+                      "title": "Find the created Clear The List",
+                      "duration": 1853
+                    },
+                    {
+                      "title": "Delete all lists again",
+                      "duration": 4909
+                    },
+                    {
+                      "title": "Sign out",
+                      "duration": 179
+                    }
+                  ],
+                  "startTime": "2025-09-25T18:21:31.530Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6ea9390ba969b6c46888-e842c25f58a51213458d",
+          "file": "llmhq/tests/regression/reg_clearTheList.spec.ts",
+          "line": 14,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-09-25T18:21:30.235Z",
+    "duration": 33040.47399999993,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
