@@ -30,21 +30,17 @@ jobs:
       run: |
         echo "Checking required environment variables..."
         
-        # Define required variables
-        required_vars=(
-          "PLAYWRIGHT_USERNAME"
-          "PLAYWRIGHT_PASSWORD"
-        )
-        
-        # Check if secrets exist using GitHub's special test syntax
-        for var in "${required_vars[@]}"; do
-          if [[ ! "${{ toJSON(secrets) }}" =~ $var ]]; then
-            echo "::error::Missing required secret: $var"
-            echo "Please configure this secret in repository settings"
-            exit 1
-          fi
-        done
-        
+        if [ -z "${{ secrets.PLAYWRIGHT_USERNAME }}" ]; then
+          echo "::error::Missing required secret: PLAYWRIGHT_USERNAME"
+          echo "Please configure this secret in repository settings"
+          exit 1
+        fi
+        if [ -z "${{ secrets.PLAYWRIGHT_PASSWORD }}" ]; then
+          echo "::error::Missing required secret: PLAYWRIGHT_PASSWORD"
+          echo "Please configure this secret in repository settings"
+          exit 1
+        fi
+
         echo "✓ Environment validation successful"
 
     - name: Use Node.js ${{ matrix.node-version }}

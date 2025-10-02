@@ -7,7 +7,7 @@
 // --- INTERFACES ---
 
 
-interface User {
+export interface User {
   email: string;
   password?: string; // Password should be loaded from environment variables
 }

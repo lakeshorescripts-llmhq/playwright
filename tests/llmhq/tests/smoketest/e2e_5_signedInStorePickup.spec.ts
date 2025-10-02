@@ -44,7 +44,7 @@ test('E2E 5 - SIGNED IN STORE PICKUP', async ({ page }) => {
     await checkout.verifyThankYouPage('$11.04');
     await home.clickOrdersLink();
     await orders.clickOrderNumber('$11.04');
-    await orders.verifyBillingInfo(billingAdd);
+    await orders.verifyBillingInfo(billingAdd, true);
     await orders.verifyTotalAmount('$11.04');
     await home.signOutFromHeader();
 
